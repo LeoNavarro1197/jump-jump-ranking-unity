@@ -267,7 +267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerControl: {fileID: 0}
   carMovementControl: {fileID: 0}
+  carPool: {fileID: 0}
   moveDirectionHorizontal: 0
   speedHorizontal: 0
-  target: {fileID: 0}
+  player: {fileID: 0}
   offsetY: 0

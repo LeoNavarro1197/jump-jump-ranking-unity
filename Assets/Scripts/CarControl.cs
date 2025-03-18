@@ -14,7 +14,6 @@ public class CarControl : MonoBehaviour
     public float speedHorizontal;
 
     public Transform player; // Referencia al personaje
-    public float offsetY = 0f; // Desplazamiento vertical opcional
 
     private GameObject assignedPoint; // Punto asignado al auto
     private float initialPlayerY; // Posición Y inicial del player
@@ -74,7 +73,7 @@ public class CarControl : MonoBehaviour
 
         // Mantener el auto en la misma posición X y Z, solo modificando la Y
         float inverseY = initialCarY - (player.position.y - initialPlayerY);
-        transform.position = new Vector3(transform.position.x, inverseY + offsetY, transform.position.z);
+        transform.position = new Vector3(transform.position.x, inverseY, transform.position.z);
     }
 
     void FixedUpdate()
@@ -92,13 +91,13 @@ public class CarControl : MonoBehaviour
     {
         if(collision.transform.tag == "SenseLocationA" && banderaA)
         {
-            speedHorizontal = Random.Range(carMovementControl.speedHorizontalMinimo, carMovementControl.speedHorizontalMaximo);  // Obtener un valor Random para el moviento en horizontal de los carros
+            speedHorizontal = Random.Range(carMovementControl.speedHorizontalMinimo, carMovementControl.speedHorizontalMaximo);
             moveDirectionHorizontal = 1;
             banderaA = false;
         }
         else if(collision.transform.tag == "SenseLocationB" && banderaB)
         {
-            speedHorizontal = Random.Range(carMovementControl.speedHorizontalMinimo, carMovementControl.speedHorizontalMaximo);  // Obtener un valor Random para el moviento en horizontal de los carros
+            speedHorizontal = Random.Range(carMovementControl.speedHorizontalMinimo, carMovementControl.speedHorizontalMaximo);
             moveDirectionHorizontal = -1;
             banderaB = false;
         }

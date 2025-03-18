@@ -3,7 +3,6 @@ using UnityEngine;
 public class CarMovementControl : MonoBehaviour
 {
     public float speedHorizontalMinimo, speedHorizontalMaximo;
-    public float carColliderRespawn = .5f;
 
     public int moveDirectionSpawns;
     public float speedSpawns;

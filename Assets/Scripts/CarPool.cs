@@ -63,8 +63,8 @@ public class CarPool : MonoBehaviour
             }
         }
         // añadimos una posicion mas a la lista. se instancian mas carros de la lista
-        AddCarToPool(1);
-        carList[carList.Count - 1].SetActive(true);
+        //AddCarToPool(1);
+        //carList[carList.Count - 1].SetActive(true);
         return carList[carList.Count - 1];
     }
 

@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class PlayerControl : MonoBehaviour
     public CarMovementControl carMovementControl;
 
     public float horizontalSpeed = 5f;
+    public float airControl = 0.1f;  // Controla qué tan rápido se detiene en el aire
+    float airAcceleration = 0.1f;
     public float jumpForce = 10f, firstJump = 9.8f;
+
     public float moveDirection = 0f;
     private Rigidbody2D rb;
 
@@ -18,8 +22,7 @@ public class PlayerControl : MonoBehaviour
     public GameObject panelCountdown, panelStart;
 
     public bool start = false;
-
-    [SerializeField] private List<CapsuleCollider2D> capsuleCollider;
+    private bool canJump = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,13 +33,6 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Obtener todos los componentes de los carros para activar el movimiento vertical de los mismos
-        /*for (int i = 0; i < carPool.carList.Count; i++)
-        {
-            CarControl carControl = carPool.carList[i].GetComponent<CarControl>();
-            capsuleCollider.Add(carControl.GetComponent<CapsuleCollider2D>());
-        }*/
-
         // Mover al player
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
@@ -50,18 +46,43 @@ public class PlayerControl : MonoBehaviour
         {
             moveDirection = 0;
         }
+    }
+
+    void FixedUpdate()
+    {
+        if (moveDirection != 0)
+        {
+            // Movimiento en el aire con control reducido
+            rb.linearVelocity = new Vector3(moveDirection * horizontalSpeed * 0.8f, rb.linearVelocity.y, 0);
+        }
+        else
+        {
+            // Si no se presiona nada, reducimos la velocidad suavemente
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x * (1 - airControl), rb.linearVelocity.y, 0);
+        }
+
+        float targetVelocityX = moveDirection * horizontalSpeed;
+        rb.linearVelocity = new Vector2(Mathf.Lerp(rb.linearVelocity.x, targetVelocityX, airAcceleration), rb.linearVelocity.y);
+
+        // Determinar caida
+        if (rb.linearVelocity.y > 0)
+        {
+            rb.gravityScale = 1;
+            Debug.Log(rb.linearVelocity);
+        }
+        else if (rb.linearVelocity.y < 0)
+        {
+            rb.gravityScale = 0.4f;
+        }
+
+
+
 
         // ----TESTEO----
         if (Input.GetKeyUp(KeyCode.Space))
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
-    }
-
-    void FixedUpdate()
-    {
-        // Dar una velocidad al player
-        rb.linearVelocity = new Vector2(moveDirection * horizontalSpeed, rb.linearVelocity.y);
     }
 
     // Cambiar la dirección del player
@@ -93,41 +114,29 @@ public class PlayerControl : MonoBehaviour
 
         start = true;
         panelCountdown.SetActive(false);
-        rb.AddForce(Vector2.up * firstJump, ForceMode2D.Impulse);  // Aplicar Fuerza de salto
-
+        rb.AddForce(Vector2.up * firstJump, ForceMode2D.Impulse);
     }
 
     // Aplicar fuerza cuando toca la parte de arriba de un carro
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.transform.tag == "Car")
+        if(collision.transform.tag == "Car" && canJump)
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            Jump();
+        }
+    }
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Car")
+        {
+            canJump = true;
         }
     }
 
-    // Desactivar colisionador del carro para poder pasar por debajo
-    // FASE_DE_PRUEBA
-    // Solo se llama a esta funcion cuando el personaje pasa debajo del carro (no por los lados)
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Jump()
     {
-        if(collision.transform.tag == "DownCollision")
-        {
-            for (int i = 0; i < carPool.poolSize; i++)
-            {
-                //capsuleCollider[i].enabled = false;
-            }
-            StartCoroutine(ActiveColliderCar());
-        }
-    }
-
-    // Activa el colisionador nuevamente despues de pasar debajo del carro
-    public IEnumerator ActiveColliderCar()
-    {
-        yield return new WaitForSeconds(carMovementControl.carColliderRespawn);
-        for (int i = 0; i < carPool.poolSize; i++)
-        {
-            //capsuleCollider[i].enabled = true;
-        }
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f); // Reinicia la velocidad en Y para evitar acumulación
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        canJump = false; // Desactiva el salto hasta que realmente haya aterrizado
     }
 }
