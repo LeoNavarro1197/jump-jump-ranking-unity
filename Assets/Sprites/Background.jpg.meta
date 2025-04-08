@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 962e27781b48fd147a26e689f881ec09
+guid: e57c027bcef08c548a0cc87c4b8d06c5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1243682241507914683
-    second: "114967713-fondo-de-espacio-de-fantas\xEDa-para-juego-m\xF3vil-2d-paisaje-alien\xEDgena-fondo-de-juego-de-paralaje_0"
+      213: -1955448553306655712
+    second: Background_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "114967713-fondo-de-espacio-de-fantas\xEDa-para-juego-m\xF3vil-2d-paisaje-alien\xEDgena-fondo-de-juego-de-paralaje_0"
+      name: Background_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 758
-        height: 1300
+        width: 1080
+        height: 3301
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54c8575379d8dbee0800000000000000
-      internalID: -1243682241507914683
+      spriteID: 024fa93b6e9dcd4e0800000000000000
+      internalID: -1955448553306655712
       vertices: []
       indices: 
       edges: []

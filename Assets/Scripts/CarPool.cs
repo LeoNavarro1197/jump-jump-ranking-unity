@@ -33,12 +33,6 @@ public class CarPool : MonoBehaviour
         StartCoroutine(InstantiateTimeCars()); //posicionar los carros en la posicion X cada X tiempo
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     // Se guardan los prefabs de los carros en la lista
     private void AddCarToPool(int amount)
     {

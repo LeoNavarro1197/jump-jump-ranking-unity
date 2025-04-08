@@ -1,92 +1,57 @@
-using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Experimental.GlobalIllumination;
-using static UnityEngine.GraphicsBuffer;
+ï»¿using UnityEngine;
 
 public class CarControl : MonoBehaviour
 {
     public PlayerControl playerControl;
+    public PlayerDestruction playerDestruction;
     public CarMovementControl carMovementControl;
-    public CarPool carPool;
 
     Rigidbody2D rb;
     public int moveDirectionHorizontal;
     public float speedHorizontal;
 
-    public Transform player; // Referencia al personaje
-
-    private GameObject assignedPoint; // Punto asignado al auto
-    private float initialPlayerY; // Posición Y inicial del player
-    private float initialCarY; // Posición Y inicial del auto
-    private bool hasInitialized = false; // Evitar cálculos antes de estar listo
+    public float speedCar;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        GameObject targetCarPool = GameObject.Find("CarPool");
-        carPool = targetCarPool.GetComponent<CarPool>();
-
-        GameObject targetPlayer = GameObject.Find("Player");
-        player = targetPlayer.GetComponent<Transform>();
-
         GameObject nombrePlayer = GameObject.Find("Player");
         playerControl = nombrePlayer.GetComponent<PlayerControl>();
+
+        GameObject nombrePlayerDestruction = GameObject.Find("Player");
+        playerDestruction = nombrePlayerDestruction.GetComponent<PlayerDestruction>();
 
         GameObject nombreCar = GameObject.Find("CarMovementControl");
         carMovementControl = nombreCar.GetComponent<CarMovementControl>();
     }
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
     private void OnEnable()
     {
         banderaA = true;
         banderaB = true;
         moveDirectionHorizontal = 0;
-
-        // Asignar un punto de la lista cuando el auto se activa
-        if (carPool.pointList != null && carPool.pointList.Count > 0)
-        {
-            assignedPoint = carPool.pointList[Random.Range(0, carPool.pointList.Count)];
-
-            // Asignar posición EXACTA del punto en el momento de activarse
-            transform.position = assignedPoint.transform.position;
-
-            // Guardar la posición inicial del auto y del jugador
-            initialCarY = transform.position.y;
-            initialPlayerY = player.position.y;
-
-            // Indicar que todo está listo para calcular en Update()
-            hasInitialized = true;
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (!hasInitialized || player == null || assignedPoint == null)
-            return;
-
-        // Mantener el auto en la misma posición X y Z, solo modificando la Y
-        float inverseY = initialCarY - (player.position.y - initialPlayerY);
-        transform.position = new Vector3(transform.position.x, inverseY, transform.position.z);
     }
 
     void FixedUpdate()
     {
-        if (playerControl.start)
+        // Iniciar juego
+        if (playerControl.start && !playerDestruction.DEATH)
         {
-            rb.linearVelocity = new Vector2(moveDirectionHorizontal * speedHorizontal, 0f);
+            // Seguir la direccion del player mas una pequeÃ±a velocidad para dar la sensacion de subida del player
+            float invertedVelocity = -playerControl.GetComponent<Rigidbody2D>().linearVelocity.y;
+            rb.linearVelocity = new Vector2(moveDirectionHorizontal * speedHorizontal, invertedVelocity - speedCar);
+        }
+        else
+        {
+            rb.linearVelocity = new Vector2(moveDirectionHorizontal * speedHorizontal, 0);
         }
     }
 
     bool banderaA = true;
     bool banderaB = true;
 
+    // Cambiar la direccion del carro cuando choque con el colisionador
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.transform.tag == "SenseLocationA" && banderaA)

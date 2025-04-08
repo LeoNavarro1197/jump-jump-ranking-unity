@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Rendering;
 using Firebase.Database;
 using TMPro;
 using System.Collections.Generic;
@@ -21,7 +20,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
      *    file there so rigth now i have no streamingassets
      */
 
-    public GameObject usernamePanel, userprofilePanel, leaderboardPanel, startPanel, leadreboardContent, userDataPrefab;
+    public GameObject usernamePanel, userprofilePanel, leaderboardPanel, startPanel, leadreboardContent, userDataPrefab, buttonLeft, buttonRight, buttonReload;
     public TMP_Text profileUsernameTxt, profileUserscoreTxt, errorUsernameTxt;
     public TMP_InputField usernameInput;
 
@@ -37,6 +36,9 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 60;
+        QualitySettings.vSyncCount = 0;
+
         FirebaseInicialize();
         ListenForScoreUpdates();
     }
@@ -68,7 +70,10 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 
         leaderboardPanel.SetActive(false);
         userprofilePanel.SetActive(true);
-        startPanel.SetActive(true);
+        startPanel.SetActive(false);
+        buttonLeft.SetActive(true);
+        buttonRight.SetActive(true);
+        buttonReload.SetActive(true);
     }
 
     public void SignOut()
@@ -308,6 +313,8 @@ public class FirebaseLeaderboardManager : MonoBehaviour
                     profileUsernameTxt.text = username;
                     profileUserscoreTxt.text = "" + score;
                     userprofilePanel.SetActive(true);
+                    buttonLeft.SetActive(false);
+                    buttonRight.SetActive(false);
                     usernamePanel.SetActive(false);
                 }
                 else
@@ -368,6 +375,8 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 
         leaderboardPanel.SetActive(true);
         userprofilePanel.SetActive(false);
+        buttonLeft.SetActive(false);
+        buttonRight.SetActive(false);
     }
 }
 
