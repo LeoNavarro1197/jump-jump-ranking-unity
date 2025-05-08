@@ -48,7 +48,7 @@ public class Parallax : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (playerControl.start && !playerDestruction.DEATH)
+        if (playerControl.START && !playerDestruction.DEATH)
         {
             // Seguir la direccion del player mas una pequeña velocidad para dar la sensacion de subida del player
             float invertedVelocity = -playerControl.GetComponent<Rigidbody2D>().linearVelocity.y;

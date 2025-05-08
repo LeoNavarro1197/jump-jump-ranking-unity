@@ -13,38 +13,29 @@ public class PlayerControl : MonoBehaviour
 
     public float moveDirection = 0f;
     private Rigidbody2D rb;
+    private BoxCollider2D boxCollider2D;
 
     public int countdown;
     public TMP_Text countdownText;
     public GameObject panelCountdown, panelStart, buttonLeft, buttonRight;
     public Rigidbody2D floor;
+    public GameObject floorGameobject;
 
-    public bool start = false;
-    public bool canJump = true;
-    public bool point = false;
+    public bool START = false;
+    public bool POINT = false;
+    private bool canJump = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Mover al player (Teclado)
-        /*if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            moveDirection = 1;
-        }
-        else if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            moveDirection = -1;
-        }
-        else if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.RightArrow))
-        {
-            moveDirection = 0;
-        }*/
+        
     }
 
     void FixedUpdate()
@@ -73,6 +64,14 @@ public class PlayerControl : MonoBehaviour
         {
             rb.gravityScale = 0.4f;
         }
+
+        if(boxCollider2D.enabled == false)
+        {
+            if (rb.linearVelocity.y < 0)
+            {
+                boxCollider2D.enabled = true;
+            }
+        }
     }
 
     // Cambiar la dirección del player (UI)
@@ -99,15 +98,23 @@ public class PlayerControl : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
+        floorGameobject.SetActive(true);
         countdownText.text = "¡GO!";
         yield return new WaitForSeconds(0.5f);
 
-        start = true;
+        START = true;
         panelCountdown.SetActive(false);
         rb.AddForce(Vector2.up * firstJump, ForceMode2D.Impulse);
         floor.bodyType = RigidbodyType2D.Dynamic;
+        boxCollider2D.enabled = false;
         buttonRight.SetActive(true);
         buttonLeft.SetActive(true);
+        Invoke("DesactiveFloor", 2);
+    }
+
+    void DesactiveFloor()
+    {
+        floorGameobject.SetActive(false);
     }
 
     // Aplicar fuerza cuando toca la parte de arriba de un carro
@@ -120,7 +127,7 @@ public class PlayerControl : MonoBehaviour
 
         if(collision.transform.tag == "Car")
         {
-            point = true;
+            POINT = true;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -128,7 +135,7 @@ public class PlayerControl : MonoBehaviour
         if (collision.transform.tag == "Car")
         {
             canJump = true;
-            point = false;
+            POINT = false;
         }
     }
 

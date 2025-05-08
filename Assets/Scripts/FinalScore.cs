@@ -12,7 +12,7 @@ public class FinalScore : MonoBehaviour
 
     private void Update()
     {
-        if (playerControl.point)
+        if (playerControl.POINT)
         {
             scoreInt = scoreInt + 1;
 
@@ -25,7 +25,7 @@ public class FinalScore : MonoBehaviour
                 PlayerPrefs.SetInt("CurrentScore", scoreInt);
                 PlayerPrefs.Save();
             }
-            playerControl.point = false;
+            playerControl.POINT = false;
         }
     }
 }

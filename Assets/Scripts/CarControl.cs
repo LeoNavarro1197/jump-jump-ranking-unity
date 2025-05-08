@@ -36,7 +36,7 @@ public class CarControl : MonoBehaviour
     void FixedUpdate()
     {
         // Iniciar juego
-        if (playerControl.start && !playerDestruction.DEATH)
+        if (playerControl.START && !playerDestruction.DEATH)
         {
             // Seguir la direccion del player mas una pequeña velocidad para dar la sensacion de subida del player
             float invertedVelocity = -playerControl.GetComponent<Rigidbody2D>().linearVelocity.y;

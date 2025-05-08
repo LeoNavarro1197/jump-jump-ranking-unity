@@ -3,6 +3,7 @@ using UnityEngine;
 using Firebase.Database;
 using TMPro;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class FirebaseLeaderboardManager : MonoBehaviour
 {
@@ -20,8 +21,8 @@ public class FirebaseLeaderboardManager : MonoBehaviour
      *    file there so rigth now i have no streamingassets
      */
 
-    public GameObject usernamePanel, userprofilePanel, leaderboardPanel, startPanel, leadreboardContent, userDataPrefab, buttonLeft, buttonRight, buttonReload;
-    public TMP_Text profileUsernameTxt, profileUserscoreTxt, errorUsernameTxt;
+    public GameObject usernamePanel, userprofilePanel, leaderboardPanel, startPanel, loadPanel, leadreboardContent, userDataPrefab, buttonLeft, buttonRight, buttonReload;
+    public TMP_Text profileUsernameTxt, profileUserscoreTxt, errorUsernameTxt, rankTxt;
     public TMP_InputField usernameInput;
 
     public int score, totalUsers = 0;
@@ -259,24 +260,36 @@ public class FirebaseLeaderboardManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("username not exist");
+                if (usernameInput.text.Length > 12)
+                {
+                    errorUsernameTxt.text = "Tu nombre de usuario debe tener entre 3 y 12 caracteres";
 
-                // push new user data
-                // set playerPrefs user ID and username for login purpose
-                // show userProfile 
+                }else if (usernameInput.text.Length < 3)
+                {
+                    errorUsernameTxt.text = "Tu nombre de usuario debe tener entre 3 y 12 caracteres";
+                }
+                else
+                {
+                    errorUsernameTxt.text = "";
+                    Debug.Log("username not exist");
 
-                PushUserData();
-                PlayerPrefs.SetInt("PlayerID", totalUsers + 1);
-                PlayerPrefs.SetString("Username", usernameInput.text);
+                    // push new user data
+                    // set playerPrefs user ID and username for login purpose
+                    // show userProfile 
 
-                StartCoroutine(delayFetchProfile());
+                    PushUserData();
+                    PlayerPrefs.SetInt("PlayerID", totalUsers + 1);
+                    PlayerPrefs.SetString("Username", usernameInput.text);
 
+                    StartCoroutine(delayFetchProfile());
+                }
             }
         }
     }
 
     IEnumerator delayFetchProfile()
     {
+        loadPanel.SetActive(true);
         yield return new WaitForSeconds(1f);
         StartCoroutine(FetchUserProfileData(totalUsers));
     }
@@ -294,6 +307,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         if (playerID != 0)
         {
             var task = db.Child("User_" + playerID.ToString()).GetValueAsync();
+            
             yield return new WaitUntil(() => task.IsCompleted);
 
             if (task.IsFaulted)
@@ -303,6 +317,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
             else if (task.IsCompleted)
             {
                 DataSnapshot snapshot = task.Result;
+                
 
                 if (snapshot != null && snapshot.HasChildren)
                 {
@@ -310,12 +325,14 @@ public class FirebaseLeaderboardManager : MonoBehaviour
                     username = snapshot.Child("username").Value.ToString();
                     score = int.Parse(snapshot.Child("score").Value.ToString());
 
+                    loadPanel.SetActive(false);
                     profileUsernameTxt.text = username;
                     profileUserscoreTxt.text = "" + score;
                     userprofilePanel.SetActive(true);
                     buttonLeft.SetActive(false);
                     buttonRight.SetActive(false);
                     usernamePanel.SetActive(false);
+                    Debug.Log("sesion iniciada");
                 }
                 else
                 {
@@ -371,6 +388,12 @@ public class FirebaseLeaderboardManager : MonoBehaviour
             obj.GetComponent<UserDataUI>().userRankTxt.text = "Rango " + rankCount;
             obj.GetComponent<UserDataUI>().usernameTxt.text = "" + leaderboardData[i].username;
             obj.GetComponent<UserDataUI>().userScoreTxt.text = "" + leaderboardData[i].score;
+
+            if(leaderboardData[i].username == PlayerPrefs.GetString("Username"))
+            {
+                rankTxt.text = rankCount.ToString();
+            }
+            
         }
 
         leaderboardPanel.SetActive(true);

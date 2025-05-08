@@ -12,6 +12,7 @@ public class PlayerDestruction : MonoBehaviour
     public bool DEATH = false;
 
     private SpriteRenderer spriteRenderer;
+    public PlayerControl playerControl;
 
     void Start()
     {
@@ -75,7 +76,7 @@ public class PlayerDestruction : MonoBehaviour
             buttonReload.SetActive(true);
             DestroyPlayer();
             DEATH = true;
-           
+            playerControl.START = false;
         }
     }
 }
