@@ -11,12 +11,12 @@ public class PlayerDestruction : MonoBehaviour
 
     public bool DEATH = false;
 
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     public PlayerControl playerControl;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        //spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void DestroyPlayer()
@@ -43,7 +43,7 @@ public class PlayerDestruction : MonoBehaviour
                     transform.position.y + (i * heightPerFragment) - (spriteSize.y / 2) + (heightPerFragment / 2)
                 );
 
-                GameObject fragment = Instantiate(fragmentPrefab, fragmentPosition, Quaternion.identity);
+                GameObject fragment = Instantiate(fragmentPrefab, playerControl.transform.position, Quaternion.identity);
                 SpriteRenderer fragmentRenderer = fragment.GetComponent<SpriteRenderer>();
 
                 if (fragmentRenderer != null)
@@ -77,6 +77,7 @@ public class PlayerDestruction : MonoBehaviour
             DestroyPlayer();
             DEATH = true;
             playerControl.START = false;
+            //Invoke("TimeDestruccion", 2);
         }
     }
 }

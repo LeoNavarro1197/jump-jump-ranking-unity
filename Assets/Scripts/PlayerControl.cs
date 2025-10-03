@@ -25,11 +25,14 @@ public class PlayerControl : MonoBehaviour
     public bool POINT = false;
     private bool canJump = true;
 
+    private Animator animator;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider2D = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -59,10 +62,14 @@ public class PlayerControl : MonoBehaviour
         if (rb.linearVelocity.y > 0)
         {
             rb.gravityScale = 1;
+            animator.SetBool("isJump", true);
+            animator.SetBool("isFall", false);
         }
         else if (rb.linearVelocity.y < 0)
         {
             rb.gravityScale = 0.4f;
+            animator.SetBool("isFall", true);
+            animator.SetBool("isJump", false);
         }
 
         if(boxCollider2D.enabled == false)
@@ -122,7 +129,10 @@ public class PlayerControl : MonoBehaviour
     {
         if(collision.transform.tag == "Car" && canJump)
         {
+            animator.SetBool("isGround", true);
+            Invoke("isGroundFalse", .1f);
             Jump();
+            
         }
 
         if(collision.transform.tag == "Car")
@@ -144,5 +154,11 @@ public class PlayerControl : MonoBehaviour
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f); // Reinicia la velocidad en Y para evitar acumulación
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // Fuerza de salto
         canJump = false; // Desactiva el salto hasta que realmente haya aterrizado
+    }
+
+    void isGroundFalse()
+    {
+        animator.SetBool("isGround", false);
+        animator.SetBool("isJump", true);
     }
 }

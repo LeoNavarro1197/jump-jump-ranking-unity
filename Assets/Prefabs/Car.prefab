@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerControl: {fileID: 0}
+  playerDestruction: {fileID: 0}
   carMovementControl: {fileID: 0}
   moveDirectionHorizontal: 0
   speedHorizontal: 0

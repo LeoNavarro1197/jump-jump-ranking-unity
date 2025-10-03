@@ -58,12 +58,14 @@ public class CarControl : MonoBehaviour
         {
             speedHorizontal = Random.Range(carMovementControl.speedHorizontalMinimo, carMovementControl.speedHorizontalMaximo);
             moveDirectionHorizontal = 1;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
             banderaA = false;
         }
         else if(collision.transform.tag == "SenseLocationB" && banderaB)
         {
             speedHorizontal = Random.Range(carMovementControl.speedHorizontalMinimo, carMovementControl.speedHorizontalMaximo);
             moveDirectionHorizontal = -1;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
             banderaB = false;
         }
 
