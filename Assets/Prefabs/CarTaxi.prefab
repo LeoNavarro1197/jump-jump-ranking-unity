@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 993421372330496527}
   - component: {fileID: 7073589471991024713}
   - component: {fileID: 8305261349286480252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CarTaxi
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8258541174776137527}
   - component: {fileID: 1499851090059949934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DownCollision
   m_TagString: DownCollision
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1893389654197583610}
   - component: {fileID: 2847804578886131614}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rail_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,8 +298,8 @@ Transform:
   m_GameObject: {fileID: 2854147209493770530}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.035, y: -0.02, z: 0}
-  m_LocalScale: {x: 0.7350014, y: 1.047377, z: 0.0073500164}
+  m_LocalPosition: {x: -0.689, y: -0.02, z: 0}
+  m_LocalScale: {x: 0.4085947, y: 1.047377, z: 0.0073500164}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4461381634470825566}

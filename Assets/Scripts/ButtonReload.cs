@@ -9,6 +9,7 @@ public class ButtonReload : MonoBehaviour
     public Rigidbody2D rbFloor;
     public Transform positionPlayer, positionFloor;
     public GameObject buttonLeft, buttonRight;
+    public bool resetBackground = false;
 
     public void ButtonReloaded()
     {
@@ -28,5 +29,7 @@ public class ButtonReload : MonoBehaviour
         playerDestruction.DEATH = false;
 
         gameObject.SetActive(false);
+
+        resetBackground = true;
     }
 }
