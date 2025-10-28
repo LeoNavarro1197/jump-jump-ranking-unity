@@ -5,8 +5,8 @@ public class ButtonReload : MonoBehaviour
     public PlayerControl playerControl;
     public PlayerDestruction playerDestruction;
     public FinalScore finalScore;
-    public GameObject player, floor;
-    public Rigidbody2D rbFloor;
+    public GameObject player, floor, edificio, niebla;
+    public Rigidbody2D rbFloor, rbEdificio2, rbNiebla;
     public Transform positionPlayer, positionFloor;
     public GameObject buttonLeft, buttonRight;
     public bool resetBackground = false;
@@ -15,8 +15,8 @@ public class ButtonReload : MonoBehaviour
     {
         player.SetActive(true);
         player.transform.position = positionPlayer.position;
-        floor.transform.position = positionFloor.position;
-        rbFloor.bodyType = RigidbodyType2D.Static;
+        floor.transform.position = positionFloor.position; edificio.transform.position = positionFloor.position; niebla.transform.position = positionFloor.position;
+        rbFloor.bodyType = RigidbodyType2D.Static; rbEdificio2.bodyType = RigidbodyType2D.Static; rbNiebla.bodyType = RigidbodyType2D.Static;
         finalScore.scoreInt = 0;
         finalScore.scoreText.text = "0";
 

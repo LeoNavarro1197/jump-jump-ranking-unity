@@ -18,8 +18,9 @@ public class PlayerControl : MonoBehaviour
     public int countdown;
     public TMP_Text countdownText;
     public GameObject panelCountdown, panelStart, buttonLeft, buttonRight;
-    public Rigidbody2D floor;
-    public GameObject floorGameobject;
+    public Rigidbody2D floor, rbEdificio2, rbNiebla;
+    public Animator animatorNiebla;
+    public GameObject floorGameobject, edificio2, niebla;
 
     public bool START = false;
     public bool POINT = false;
@@ -106,13 +107,16 @@ public class PlayerControl : MonoBehaviour
         }
 
         floorGameobject.SetActive(true);
+        edificio2.SetActive(true);
+        niebla.SetActive(true);
         countdownText.text = "¡GO!";
         yield return new WaitForSeconds(0.5f);
 
         START = true;
         panelCountdown.SetActive(false);
         rb.AddForce(Vector2.up * firstJump, ForceMode2D.Impulse);
-        floor.bodyType = RigidbodyType2D.Dynamic;
+        floor.bodyType = RigidbodyType2D.Dynamic; rbEdificio2.bodyType = RigidbodyType2D.Dynamic; rbNiebla.bodyType = RigidbodyType2D.Dynamic;
+        animatorNiebla.enabled = false;
         boxCollider2D.enabled = false;
         buttonRight.SetActive(true);
         buttonLeft.SetActive(true);
@@ -122,6 +126,8 @@ public class PlayerControl : MonoBehaviour
     void DesactiveFloor()
     {
         floorGameobject.SetActive(false);
+        edificio2.SetActive(false);
+        niebla.SetActive(false);
     }
 
     // Aplicar fuerza cuando toca la parte de arriba de un carro
