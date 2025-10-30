@@ -82,7 +82,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    // Cambiar la dirección del player (UI)
+    // Cambiar la dirección del player
     public void MoveLeft() { moveDirection = -1; }
     public void MoveRight() { moveDirection = 1; }
     public void StopMoving() { moveDirection = 0; }
@@ -110,7 +110,7 @@ public class PlayerControl : MonoBehaviour
         edificio2.SetActive(true);
         niebla.SetActive(true);
         countdownText.text = "¡GO!";
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(.5f);
 
         START = true;
         panelCountdown.SetActive(false);
