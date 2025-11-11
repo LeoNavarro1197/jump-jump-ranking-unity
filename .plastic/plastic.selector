@@ -1,4 +1,4 @@
-repository "JumpJumpRanking@LeoNavarro@cloud"
+repository "Cloud Repositories/JumpJumpRanking@4278362@cloud"
   path "/"
     br "/main"
     co "/main"

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      niebla baja_0: 2219797647315111302
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

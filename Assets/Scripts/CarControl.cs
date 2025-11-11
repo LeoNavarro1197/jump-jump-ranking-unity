@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class CarControl : MonoBehaviour
 {
@@ -76,6 +77,16 @@ public class CarControl : MonoBehaviour
         if (collision.transform.tag == "SenseLocationA" && !banderaB)
         {
             gameObject.SetActive(false);
+        }
+
+        
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.transform.tag == "Player")
+        {
+            Debug.Log("Bouncing");
         }
     }
 }
