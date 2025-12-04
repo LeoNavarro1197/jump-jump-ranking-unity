@@ -5,7 +5,7 @@ public class PlayerDestruction : MonoBehaviour
     public int rows;  // Número de filas en que se divide el sprite
     public int columns; // Número de columnas en que se divide el sprite
     public float explosionForce; // Fuerza con la que se dispersan los fragmentos
-    public GameObject fragmentPrefab; // Prefab base para los fragmentos
+    public GameObject fragmentPrefab, explosion; // Prefab base para los fragmentos
 
     public GameObject buttonReload, buttonLeft, buttonRight;
 
@@ -14,8 +14,11 @@ public class PlayerDestruction : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public PlayerControl playerControl;
 
+    SoundManager soundManager;
+
     void Start()
     {
+        soundManager = FindFirstObjectByType<SoundManager>();
         //spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -74,6 +77,8 @@ public class PlayerDestruction : MonoBehaviour
             buttonLeft.SetActive(false);
             buttonRight.SetActive(false);
             buttonReload.SetActive(true);
+            Instantiate(explosion, playerControl.transform.position, Quaternion.identity);
+            soundManager.SelectClip(0, 1f);
             DestroyPlayer();
             DEATH = true;
             playerControl.START = false;

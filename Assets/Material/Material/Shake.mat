@@ -33,8 +33,8 @@ Material:
     - Effect_Fade: 1
     - ExplosionValue: 0.108
     - FishEyeUV_Size_1: 0.185
-    - Intensity_X: 1
-    - Intensity_Y: 0.09
+    - Intensity_X: 0
+    - Intensity_Y: 0
     - LineSize: 1.7
     - LiquidUV_DistanceX_1: 0.3
     - LiquidUV_DistanceY_1: 0.3
@@ -46,7 +46,7 @@ Material:
     - OffsetUV_ZoomX_1: 1
     - OffsetUV_ZoomY_1: 1
     - Offset_X: 0
-    - Offset_Y: 0.0378
+    - Offset_Y: 0
     - PinchUV_Size_1: 0.2540917
     - PixelUV_Size: 18.74812
     - PixelUV_Size_1: 0.93249893
@@ -59,7 +59,7 @@ Material:
     - Repeat: 11.783579
     - Roar_Intensity: 0.041
     - Size: 1.091
-    - Speed: 0.544
+    - Speed: 0
     - TwistUV_TwistUV_Bend_1: 0.39
     - TwistUV_TwistUV_PosX_1: 0.53
     - TwistUV_TwistUV_PosY_1: 0.43

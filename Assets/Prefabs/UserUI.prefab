@@ -38,8 +38,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 317.65, y: -47.5}
-  m_SizeDelta: {x: 617.3, y: 75}
+  m_AnchoredPosition: {x: 255.39748, y: -47.5}
+  m_SizeDelta: {x: 492.795, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3859989262207900152
 CanvasRenderer:
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 4542762850298186674, guid: 61305c78e39f86e488426225d3779e9b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -128,8 +128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 545.9386, y: 0}
-  m_SizeDelta: {x: 133.2009, y: 50}
+  m_AnchoredPosition: {x: 419.57, y: 0}
+  m_SizeDelta: {x: 106.9167, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5273675192275919123
 CanvasRenderer:
@@ -163,8 +163,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a65ca071f365ae94b98fb51cdf1ed11b, type: 2}
+  m_sharedMaterial: {fileID: 5088471970423487489, guid: a65ca071f365ae94b98fb51cdf1ed11b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -188,8 +188,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 13
+  m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -266,8 +266,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 321.01935, y: 0}
-  m_SizeDelta: {x: 325.7476, y: 50}
+  m_AnchoredPosition: {x: 258.20096, y: 0}
+  m_SizeDelta: {x: 197.8967, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5824620675856606935
 CanvasRenderer:
@@ -297,10 +297,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: leonardoN
+  m_text: leonardonav
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a65ca071f365ae94b98fb51cdf1ed11b, type: 2}
+  m_sharedMaterial: {fileID: 5088471970423487489, guid: a65ca071f365ae94b98fb51cdf1ed11b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -324,8 +324,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -402,8 +402,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 73.8544, y: 0}
-  m_SizeDelta: {x: 147.7089, y: 50}
+  m_AnchoredPosition: {x: 86.3604, y: 0}
+  m_SizeDelta: {x: 120.9268, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1508081056649962323
 CanvasRenderer:
@@ -433,10 +433,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'RANK: 1'
+  m_text: 'RANK: 000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: a65ca071f365ae94b98fb51cdf1ed11b, type: 2}
+  m_sharedMaterial: {fileID: 5088471970423487489, guid: a65ca071f365ae94b98fb51cdf1ed11b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -460,8 +460,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

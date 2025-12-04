@@ -21,7 +21,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
      *    file there so rigth now i have no streamingassets
      */
 
-    public GameObject usernamePanel, userprofilePanel, leaderboardPanel, startPanel, loadPanel, leadreboardContent, userDataPrefab, buttonLeft, buttonRight, buttonReload;
+    public GameObject usernamePanel, userprofilePanel, leaderboardPanel, optionsPanel, bloqueadorPanel, startPanel, loadPanel, leadreboardContent, userDataPrefab, buttonLeft, buttonRight, buttonReload;
     public TMP_Text profileUsernameTxt, profileUserscoreTxt, errorUsernameTxt, rankTxt;
     public TMP_InputField usernameInput;
 
@@ -34,6 +34,15 @@ public class FirebaseLeaderboardManager : MonoBehaviour
     // Firebase Database Type to get database reference
     // Tipo de base de datos de Firebase para obtener la referencia de la base de datos
     private DatabaseReference db;
+
+    private void Awake()
+    {
+        if (PlayerPrefs.GetString("Username") != "")
+        {
+            usernamePanel.SetActive(false);
+            loadPanel.SetActive(true);
+        }
+    }
 
     void Start()
     {
@@ -75,6 +84,18 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         buttonLeft.SetActive(true);
         buttonRight.SetActive(true);
         buttonReload.SetActive(true);
+    }
+
+    public void OpenOptions()
+    {
+        optionsPanel.SetActive(true);
+        bloqueadorPanel.SetActive(true);
+    }
+
+    public void CloseOptions()
+    {
+        optionsPanel.SetActive(false);
+        bloqueadorPanel.SetActive(false);
     }
 
     public void SignOut()
@@ -385,7 +406,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
             obj.transform.parent = leadreboardContent.transform;
             obj.transform.localScale = Vector3.one;
 
-            obj.GetComponent<UserDataUI>().userRankTxt.text = "Rango " + rankCount;
+            obj.GetComponent<UserDataUI>().userRankTxt.text = "Rank " + rankCount;
             obj.GetComponent<UserDataUI>().usernameTxt.text = "" + leaderboardData[i].username;
             obj.GetComponent<UserDataUI>().userScoreTxt.text = "" + leaderboardData[i].score;
 

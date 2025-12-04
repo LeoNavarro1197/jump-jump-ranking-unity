@@ -6,12 +6,17 @@ public class CarControl : MonoBehaviour
     public PlayerControl playerControl;
     public PlayerDestruction playerDestruction;
     public CarMovementControl carMovementControl;
+    public Material material;
+    public Animator animator;
+    public SpriteRenderer spriteRenderer, chispas_0;
 
     Rigidbody2D rb;
     public int moveDirectionHorizontal;
     public float speedHorizontal;
 
     public float speedCar;
+
+    SpriteRenderer sr;
 
     private void Awake()
     {
@@ -25,6 +30,8 @@ public class CarControl : MonoBehaviour
 
         GameObject nombreCar = GameObject.Find("CarMovementControl");
         carMovementControl = nombreCar.GetComponent<CarMovementControl>();
+
+        sr = GetComponent<SpriteRenderer>();
     }
 
     private void OnEnable()
@@ -79,14 +86,38 @@ public class CarControl : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        
+        if (collision.transform.tag == "SenseLocationA" || collision.transform.tag == "SenseLocationB")
+        {
+            animator.SetBool("isPlay", false);
+            spriteRenderer.sprite = chispas_0.sprite;
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.transform.tag == "Player")
         {
-            Debug.Log("Bouncing");
+            sr.material.SetFloat("Offset_Y", 0.05f);
+            sr.material.SetFloat("Intensity_Y", 0.17f);
+            sr.material.SetFloat("Speed", 0.5f);
+
+            animator.SetBool("isPlay", true);
+
+            Invoke("ResetMaterial", .5f);
+            Invoke("ResetParticles", .5f);
         }
+    }
+
+    void ResetMaterial()
+    {
+        sr.material.SetFloat("Offset_Y", 0f);
+        sr.material.SetFloat("Intensity_Y", 0f);
+        sr.material.SetFloat("Speed", 0f);
+    }
+
+    void ResetParticles()
+    {
+        animator.SetBool("isPlay", false);
     }
 }
