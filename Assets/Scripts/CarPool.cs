@@ -8,6 +8,7 @@ public class CarPool : MonoBehaviour
     [SerializeField] public int poolSize;
     [SerializeField] public float amountTime;
     [SerializeField] public List<GameObject> carList;
+    [SerializeField] public List<SpriteRenderer> carListSprite;
 
     [SerializeField] public List<GameObject> pointList;
 
@@ -33,14 +34,21 @@ public class CarPool : MonoBehaviour
         StartCoroutine(InstantiateTimeCars()); //posicionar los carros en la posicion X cada X tiempo
     }
 
-    // Se guardan los prefabs de los carros en la lista
     private void AddCarToPool(int amount)
+    {
+        AddCarToPool(amount, carPrefab);
+    }
+
+    // Se guardan los prefabs de los carros en la lista
+    private void AddCarToPool(int amount, GameObject carPrefab)
     {
         for (int i = 0; i < amount; i++)
         {
             GameObject car = Instantiate(carPrefab); // guardar la instancia en un gameobject
+            SpriteRenderer carSprite = car.GetComponent<SpriteRenderer>();
             car.SetActive(false);
             carList.Add(car);
+            carListSprite.Add(carSprite);
             car.transform.parent = transform; // se instancian en una posicion en la jerarquia
         }
     }

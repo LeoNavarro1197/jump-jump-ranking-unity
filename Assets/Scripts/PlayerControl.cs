@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour
 {
     public CarPool carPool;
     public CarMovementControl carMovementControl;
+    public SoundManager soundManager;
 
     public float horizontalSpeed = 5f;
     public float airControl = 0.1f;
@@ -28,18 +29,15 @@ public class PlayerControl : MonoBehaviour
 
     private Animator animator;
 
+    public bool isMusicSlow = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         boxCollider2D = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        soundManager = FindFirstObjectByType<SoundManager>();
     }
 
     void FixedUpdate()
@@ -91,6 +89,7 @@ public class PlayerControl : MonoBehaviour
     public void CoroutineStart()
     {
         StartCoroutine(StartCountdown());
+        soundManager.SelectClip(3, 1f);
     }
 
     // Funcion para empezar el juego
@@ -98,6 +97,8 @@ public class PlayerControl : MonoBehaviour
     {
         panelCountdown.SetActive(true);
         panelStart.SetActive(false);
+
+        isMusicSlow = true;
 
         for (int i = countdown; i > 0; i--)
         {
@@ -113,6 +114,7 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(.5f);
 
         START = true;
+        soundManager.SelectClip(2, 1f);
         panelCountdown.SetActive(false);
         rb.AddForce(Vector2.up * firstJump, ForceMode2D.Impulse);
         floor.bodyType = RigidbodyType2D.Dynamic; rbEdificio2.bodyType = RigidbodyType2D.Dynamic; rbNiebla.bodyType = RigidbodyType2D.Dynamic;
@@ -138,7 +140,7 @@ public class PlayerControl : MonoBehaviour
             animator.SetBool("isGround", true);
             Invoke("isGroundFalse", .1f);
             Jump();
-            
+            soundManager.SelectClip(1, 1f);
         }
 
         if(collision.transform.tag == "Car")

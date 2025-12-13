@@ -1,0 +1,904 @@
+fileFormatVersion: 2
+guid: 8c04f21bcb8d44e42a156300133f2f09
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6566130366437944840
+    second: amarillo grande transparente_0
+  - first:
+      213: 8574453365207702687
+    second: amarillo grande transparente_1
+  - first:
+      213: 1535921928876201186
+    second: amarillo grande transparente_2
+  - first:
+      213: -349571972863652792
+    second: amarillo grande transparente_3
+  - first:
+      213: -5286492801546099581
+    second: amarillo grande transparente_4
+  - first:
+      213: -1692893001844454520
+    second: amarillo grande transparente_5
+  - first:
+      213: 3260555549537376824
+    second: amarillo grande transparente_6
+  - first:
+      213: 3146924675288410261
+    second: amarillo grande transparente_7
+  - first:
+      213: -3610676653624002856
+    second: amarillo grande transparente_8
+  - first:
+      213: 1911419692641281196
+    second: amarillo grande transparente_9
+  - first:
+      213: -7058753467946076090
+    second: amarillo grande transparente_10
+  - first:
+      213: -4109259619313635303
+    second: amarillo grande transparente_11
+  - first:
+      213: -234103661526591205
+    second: amarillo grande transparente_12
+  - first:
+      213: -23925000040602259
+    second: amarillo grande transparente_13
+  - first:
+      213: 2125732966137928700
+    second: amarillo grande transparente_14
+  - first:
+      213: -816545692209252550
+    second: amarillo grande transparente_15
+  - first:
+      213: -937184843054480392
+    second: amarillo grande transparente_16
+  - first:
+      213: 1016708205424980786
+    second: amarillo grande transparente_17
+  - first:
+      213: -3489559682583331547
+    second: amarillo grande transparente_18
+  - first:
+      213: 8551577635415919075
+    second: amarillo grande transparente_19
+  - first:
+      213: 2240663232996107997
+    second: amarillo grande transparente_20
+  - first:
+      213: -3309420007677529111
+    second: amarillo grande transparente_21
+  - first:
+      213: 7826909242442639938
+    second: amarillo grande transparente_22
+  - first:
+      213: 2171033751023065473
+    second: amarillo grande transparente_23
+  - first:
+      213: -6434620637906062272
+    second: amarillo grande transparente_24
+  - first:
+      213: -889603514286780249
+    second: amarillo grande transparente_25
+  - first:
+      213: -4809481115941773199
+    second: amarillo grande transparente_26
+  - first:
+      213: 4999363768800300351
+    second: amarillo grande transparente_27
+  - first:
+      213: -4701664719892007553
+    second: amarillo grande transparente_28
+  - first:
+      213: -1930331232837357230
+    second: amarillo grande transparente_29
+  - first:
+      213: -9218854063772079232
+    second: amarillo grande transparente_30
+  - first:
+      213: -888841085689968928
+    second: amarillo grande transparente_31
+  - first:
+      213: 3171582893109700687
+    second: amarillo grande transparente_32
+  - first:
+      213: 3602508486811182367
+    second: amarillo grande transparente_33
+  - first:
+      213: 711113706305023311
+    second: amarillo grande transparente_34
+  - first:
+      213: 1546200385579410570
+    second: amarillo grande transparente_35
+  - first:
+      213: 8859715228838980627
+    second: amarillo grande transparente_36
+  - first:
+      213: 2940181204684586406
+    second: amarillo grande transparente_37
+  - first:
+      213: -7759871168402036529
+    second: amarillo grande transparente_38
+  - first:
+      213: -7940348961571401582
+    second: amarillo grande transparente_39
+  - first:
+      213: 5503938929796934005
+    second: amarillo grande transparente_40
+  - first:
+      213: -5457097561605226170
+    second: amarillo grande transparente_41
+  - first:
+      213: 4198375474627422072
+    second: amarillo grande transparente_42
+  - first:
+      213: 620315882208435781
+    second: amarillo grande transparente_43
+  - first:
+      213: 4775762335026030233
+    second: amarillo grande transparente_44
+  - first:
+      213: -642723847977236137
+    second: amarillo grande transparente_45
+  - first:
+      213: 4443165555302164811
+    second: amarillo grande transparente_46
+  - first:
+      213: 2370339288178950107
+    second: amarillo grande transparente_47
+  - first:
+      213: -8510442563846116121
+    second: amarillo grande transparente_48
+  - first:
+      213: 5172816371290920583
+    second: amarillo grande transparente_49
+  - first:
+      213: 2358586881476547110
+    second: amarillo grande transparente_50
+  - first:
+      213: -6592328399074893661
+    second: amarillo grande transparente_51
+  - first:
+      213: -6397915220683770063
+    second: amarillo grande transparente_52
+  - first:
+      213: -6798203716406023518
+    second: amarillo grande transparente_53
+  - first:
+      213: -8049405510208714674
+    second: amarillo grande transparente_54
+  - first:
+      213: 5447603533457287959
+    second: amarillo grande transparente_55
+  - first:
+      213: -776052351811131060
+    second: amarillo grande transparente_56
+  - first:
+      213: 8866283980187993196
+    second: amarillo grande transparente_57
+  - first:
+      213: 2233659112008075590
+    second: amarillo grande transparente_58
+  - first:
+      213: -6062252260172832023
+    second: amarillo grande transparente_59
+  - first:
+      213: -5629195053245127358
+    second: amarillo grande transparente_60
+  - first:
+      213: 2527868045283548387
+    second: amarillo grande transparente_61
+  - first:
+      213: -5716929443876702802
+    second: amarillo grande transparente_62
+  - first:
+      213: -5998647091650110573
+    second: amarillo grande transparente_63
+  - first:
+      213: 2402712364148685760
+    second: amarillo grande transparente_64
+  - first:
+      213: 3215863296250355886
+    second: amarillo grande transparente_65
+  - first:
+      213: 2573410867859915303
+    second: amarillo grande transparente_66
+  - first:
+      213: 5849481590801396300
+    second: amarillo grande transparente_67
+  - first:
+      213: -2772893678664258160
+    second: amarillo grande transparente_68
+  - first:
+      213: 118294658233909433
+    second: amarillo grande transparente_69
+  - first:
+      213: -3052669395107623823
+    second: amarillo grande transparente_70
+  - first:
+      213: -2670129075462386528
+    second: amarillo grande transparente_71
+  - first:
+      213: -6857517170940910468
+    second: amarillo grande transparente_72
+  - first:
+      213: -758417212223876496
+    second: amarillo grande transparente_73
+  - first:
+      213: 6697568262451489947
+    second: amarillo grande transparente_74
+  - first:
+      213: -3973081522698884255
+    second: amarillo grande transparente_75
+  - first:
+      213: 2315034390093741959
+    second: amarillo grande transparente_76
+  - first:
+      213: -6407366868744860883
+    second: amarillo grande transparente_77
+  - first:
+      213: -6562441424341528439
+    second: amarillo grande transparente_78
+  - first:
+      213: 4881770903982526237
+    second: amarillo grande transparente_79
+  - first:
+      213: -7574209178267399265
+    second: amarillo grande transparente_80
+  - first:
+      213: 358768315334997435
+    second: amarillo grande transparente_81
+  - first:
+      213: 868089963336709580
+    second: amarillo grande transparente_82
+  - first:
+      213: -6423269312513848861
+    second: amarillo grande transparente_83
+  - first:
+      213: -2153640302180984080
+    second: amarillo grande transparente_84
+  - first:
+      213: 3986713914778134771
+    second: amarillo grande transparente_85
+  - first:
+      213: 8568574789281708279
+    second: amarillo grande transparente_86
+  - first:
+      213: -8792325177146409505
+    second: amarillo grande transparente_87
+  - first:
+      213: -4322628436596685987
+    second: amarillo grande transparente_88
+  - first:
+      213: 5207610744247209077
+    second: amarillo grande transparente_89
+  - first:
+      213: -3433079794276181312
+    second: amarillo grande transparente_90
+  - first:
+      213: -1001829312388474044
+    second: amarillo grande transparente_91
+  - first:
+      213: -1673775350352285645
+    second: amarillo grande transparente_92
+  - first:
+      213: 1148702840987508186
+    second: amarillo grande transparente_93
+  - first:
+      213: -8030145959464002184
+    second: amarillo grande transparente_94
+  - first:
+      213: 468657880063599550
+    second: amarillo grande transparente_95
+  - first:
+      213: -1789473734119218133
+    second: amarillo grande transparente_96
+  - first:
+      213: 1386431267703887238
+    second: amarillo grande transparente_97
+  - first:
+      213: 4114608389894503529
+    second: amarillo grande transparente_98
+  - first:
+      213: -6718744774587922615
+    second: amarillo grande transparente_99
+  - first:
+      213: -5283993444478834530
+    second: amarillo grande transparente_100
+  - first:
+      213: -3524319672524275776
+    second: amarillo grande transparente_101
+  - first:
+      213: -8551800348675564957
+    second: amarillo grande transparente_102
+  - first:
+      213: 5465215655735142368
+    second: amarillo grande transparente_103
+  - first:
+      213: -7937949493972267814
+    second: amarillo grande transparente_104
+  - first:
+      213: -3914194718568658524
+    second: amarillo grande transparente_105
+  - first:
+      213: -2924977633961686646
+    second: amarillo grande transparente_106
+  - first:
+      213: -2162599701553450984
+    second: amarillo grande transparente_107
+  - first:
+      213: -5698179083992008457
+    second: amarillo grande transparente_108
+  - first:
+      213: -6713368847358501517
+    second: amarillo grande transparente_109
+  - first:
+      213: -3347857986385490151
+    second: amarillo grande transparente_110
+  - first:
+      213: 4094080628364558430
+    second: amarillo grande transparente_111
+  - first:
+      213: 5464273071910966831
+    second: amarillo grande transparente_112
+  - first:
+      213: 3156095310567094621
+    second: amarillo grande transparente_113
+  - first:
+      213: 2176328317405197325
+    second: amarillo grande transparente_114
+  - first:
+      213: -8736937889923183152
+    second: amarillo grande transparente_115
+  - first:
+      213: -5474133511085419636
+    second: amarillo grande transparente_116
+  - first:
+      213: 3409510321948824472
+    second: amarillo grande transparente_117
+  - first:
+      213: 8435312930482446067
+    second: amarillo grande transparente_118
+  - first:
+      213: 8549754327394904560
+    second: amarillo grande transparente_119
+  - first:
+      213: 1003999459555300837
+    second: amarillo grande transparente_120
+  - first:
+      213: 6328007798668032408
+    second: amarillo grande transparente_121
+  - first:
+      213: -2712862405946777102
+    second: amarillo grande transparente_122
+  - first:
+      213: -3084241286544253951
+    second: amarillo grande transparente_123
+  - first:
+      213: -6809547138927705447
+    second: amarillo grande transparente_124
+  - first:
+      213: -6954856232334670190
+    second: amarillo grande transparente_125
+  - first:
+      213: -8691569828332661459
+    second: amarillo grande transparente_126
+  - first:
+      213: -414741198108809542
+    second: amarillo grande transparente_127
+  - first:
+      213: -6965732232350115949
+    second: amarillo grande transparente_128
+  - first:
+      213: 339550702328765149
+    second: amarillo grande transparente_129
+  - first:
+      213: -6409188026375444721
+    second: amarillo grande transparente_130
+  - first:
+      213: 3365798132389504585
+    second: amarillo grande transparente_131
+  - first:
+      213: -3620417178484582659
+    second: amarillo grande transparente_132
+  - first:
+      213: 3322063011544332396
+    second: amarillo grande transparente_133
+  - first:
+      213: 3334036000166712402
+    second: amarillo grande transparente_134
+  - first:
+      213: -5541894502337940815
+    second: amarillo grande transparente_135
+  - first:
+      213: -892510621250824020
+    second: amarillo grande transparente_136
+  - first:
+      213: -6590026778993657084
+    second: amarillo grande transparente_137
+  - first:
+      213: -2103135607011549954
+    second: amarillo grande transparente_138
+  - first:
+      213: -3437790690679486321
+    second: amarillo grande transparente_139
+  - first:
+      213: 8690498854465793064
+    second: amarillo grande transparente_140
+  - first:
+      213: 6258899947400572366
+    second: amarillo grande transparente_141
+  - first:
+      213: -9087034877856040082
+    second: amarillo grande transparente_142
+  - first:
+      213: 8453346186233180194
+    second: amarillo grande transparente_143
+  - first:
+      213: -5155072035670528325
+    second: amarillo grande transparente_144
+  - first:
+      213: 6830083919566472766
+    second: amarillo grande transparente_145
+  - first:
+      213: -8786434534862857054
+    second: amarillo grande transparente_146
+  - first:
+      213: -195763688278426810
+    second: amarillo grande transparente_147
+  - first:
+      213: 7976681634903922973
+    second: amarillo grande transparente_148
+  - first:
+      213: 4419355291167367052
+    second: amarillo grande transparente_149
+  - first:
+      213: 5868231412617646324
+    second: amarillo grande transparente_150
+  - first:
+      213: 924194450556462537
+    second: amarillo grande transparente_151
+  - first:
+      213: 6240303482461848135
+    second: amarillo grande transparente_152
+  - first:
+      213: 2079783661669025278
+    second: amarillo grande transparente_153
+  - first:
+      213: -3519942539769989337
+    second: amarillo grande transparente_154
+  - first:
+      213: 4059180849804137181
+    second: amarillo grande transparente_155
+  - first:
+      213: 3905759984377994339
+    second: amarillo grande transparente_156
+  - first:
+      213: 8427019035059989577
+    second: amarillo grande transparente_157
+  - first:
+      213: -8616006990864187675
+    second: amarillo grande transparente_158
+  - first:
+      213: -5317904819295521354
+    second: amarillo grande transparente_159
+  - first:
+      213: -1694047251073878965
+    second: amarillo grande transparente_160
+  - first:
+      213: 6690805690491166140
+    second: amarillo grande transparente_161
+  - first:
+      213: -8574438526055256727
+    second: amarillo grande transparente_162
+  - first:
+      213: -6213441914361313900
+    second: amarillo grande transparente_163
+  - first:
+      213: -417198688059361181
+    second: amarillo grande transparente_164
+  - first:
+      213: 4634756235239898063
+    second: amarillo grande transparente_165
+  - first:
+      213: -3738367019575087914
+    second: amarillo grande transparente_166
+  - first:
+      213: 1142076300747885330
+    second: amarillo grande transparente_167
+  - first:
+      213: -7014207704446286987
+    second: amarillo grande transparente_168
+  - first:
+      213: -5880594102796322738
+    second: amarillo grande transparente_169
+  - first:
+      213: 2809749055561640397
+    second: amarillo grande transparente_170
+  - first:
+      213: -7002269504156871313
+    second: amarillo grande transparente_171
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: amarillo grande transparente_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f19f87783b60e4a0800000000000000
+      internalID: -6566130366437944840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amarillo grande transparente_1
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c9b5008e39ef670800000000000000
+      internalID: 8574453365207702687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amarillo grande transparente_2
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4166d4bd0b05510800000000000000
+      internalID: 1535921928876201186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amarillo grande transparente_3
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c870e8422162bf0800000000000000
+      internalID: -349571972863652792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amarillo grande transparente_4
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3846f285eca92a6b0800000000000000
+      internalID: -5286492801546099581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amarillo grande transparente_5
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b015eb8c2a188e0800000000000000
+      internalID: -1692893001844454520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amarillo grande transparente_6
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83a9a944ff1df3d20800000000000000
+      internalID: 3260555549537376824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amarillo grande transparente_7
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5982a7da15f1cab20800000000000000
+      internalID: 3146924675288410261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amarillo grande transparente_8
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 384
+        height: 384
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d6f1f5b6bc44edc0800000000000000
+      internalID: -3610676653624002856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amarillo grande transparente_9
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 0
+        width: 384
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4e194551ab68a10800000000000000
+      internalID: 1911419692641281196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c4ef357e42c238746b96b107fe10ffa2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":384.0,"y":384.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      amarillo grande transparente_0: -6566130366437944840
+      amarillo grande transparente_1: 8574453365207702687
+      amarillo grande transparente_2: 1535921928876201186
+      amarillo grande transparente_3: -349571972863652792
+      amarillo grande transparente_4: -5286492801546099581
+      amarillo grande transparente_5: -1692893001844454520
+      amarillo grande transparente_6: 3260555549537376824
+      amarillo grande transparente_7: 3146924675288410261
+      amarillo grande transparente_8: -3610676653624002856
+      amarillo grande transparente_9: 1911419692641281196
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -5,17 +5,23 @@ public class ButtonReload : MonoBehaviour
     public PlayerControl playerControl;
     public PlayerDestruction playerDestruction;
     public FinalScore finalScore;
+    [SerializeField] CarPool carPool;
     public GameObject player, floor, edificio, niebla;
     public Rigidbody2D rbFloor, rbEdificio2, rbNiebla;
     public Transform positionPlayer, positionFloor;
     public GameObject buttonLeft, buttonRight;
     public bool resetBackground = false;
 
+    [SerializeField] Animator animationRedPlanet;
+    [SerializeField] SpriteRenderer[] sprites;
+
     public void ButtonReloaded()
     {
         player.SetActive(true);
         player.transform.position = positionPlayer.position;
-        floor.transform.position = positionFloor.position; edificio.transform.position = positionFloor.position; niebla.transform.position = positionFloor.position;
+        floor.transform.position = positionFloor.position;
+        edificio.transform.position = new Vector2(positionFloor.position.x, positionFloor.position.y + .7f);
+        niebla.transform.position = new Vector2(positionFloor.position.x, positionFloor.position.y + .2f);
         rbFloor.bodyType = RigidbodyType2D.Static; rbEdificio2.bodyType = RigidbodyType2D.Static; rbNiebla.bodyType = RigidbodyType2D.Static;
         finalScore.scoreInt = 0;
         finalScore.scoreText.text = "0";
@@ -31,5 +37,21 @@ public class ButtonReload : MonoBehaviour
         gameObject.SetActive(false);
 
         resetBackground = true;
+
+        animationRedPlanet.SetBool("isMovement", false);
+        SpriteToWhite();
+    }
+
+    void SpriteToWhite()
+    {
+        for(int i = 0; i < sprites.Length; i++)
+        {
+            sprites[i].color = Color.white;
+        }
+
+        for (int i = 0; i < carPool.carListSprite.Count; i++)
+        {
+            carPool.carListSprite[i].color = Color.white;
+        }
     }
 }

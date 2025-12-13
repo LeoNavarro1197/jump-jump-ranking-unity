@@ -35,22 +35,28 @@ public class FirebaseLeaderboardManager : MonoBehaviour
     // Tipo de base de datos de Firebase para obtener la referencia de la base de datos
     private DatabaseReference db;
 
+    private SoundManager soundManager;
+
     private void Awake()
     {
-        if (PlayerPrefs.GetString("Username") != "")
-        {
-            usernamePanel.SetActive(false);
-            loadPanel.SetActive(true);
-        }
+        
     }
 
     void Start()
     {
+        soundManager = FindFirstObjectByType<SoundManager>();
+
         Application.targetFrameRate = 60;
         QualitySettings.vSyncCount = 0;
 
         FirebaseInicialize();
         ListenForScoreUpdates();
+
+        /*if (PlayerPrefs.GetString("Username") != "")
+        {
+            usernamePanel.SetActive(false);
+            loadPanel.SetActive(true);
+        }*/
     }
 
     void Update()
@@ -65,6 +71,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 
     public void SignInWithUsername()
     {
+        soundManager.SelectClip(3, 1f);
         StartCoroutine(CheckUserExistInDatabase());
     }
 
