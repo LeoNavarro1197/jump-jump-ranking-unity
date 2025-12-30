@@ -1,0 +1,2262 @@
+fileFormatVersion: 2
+guid: 29b595165a5b3f14882bd1d32f4134a7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6734183043120451897
+    second: planeta azul_0
+  - first:
+      213: 4324995994320766028
+    second: planeta azul_1
+  - first:
+      213: -684857677637628218
+    second: planeta azul_2
+  - first:
+      213: 4683218439728555142
+    second: planeta azul_3
+  - first:
+      213: -525467215780754651
+    second: planeta azul_4
+  - first:
+      213: -4549076407124105504
+    second: planeta azul_5
+  - first:
+      213: -7046557911347719440
+    second: planeta azul_6
+  - first:
+      213: 6552642733474402601
+    second: planeta azul_7
+  - first:
+      213: 2389969447591104909
+    second: planeta azul_8
+  - first:
+      213: -1912380939478384058
+    second: planeta azul_9
+  - first:
+      213: 6501986159495997243
+    second: planeta azul_10
+  - first:
+      213: 2493629412797991079
+    second: planeta azul_11
+  - first:
+      213: -5582125379973892520
+    second: planeta azul_12
+  - first:
+      213: 6385120424849213949
+    second: planeta azul_13
+  - first:
+      213: -6536954588612069385
+    second: planeta azul_14
+  - first:
+      213: -3665889786847268
+    second: planeta azul_15
+  - first:
+      213: 8479187599807520029
+    second: planeta azul_16
+  - first:
+      213: 407290769459004568
+    second: planeta azul_17
+  - first:
+      213: 8872608747350092839
+    second: planeta azul_18
+  - first:
+      213: 5547141200520628957
+    second: planeta azul_19
+  - first:
+      213: -6450079862628879165
+    second: planeta azul_20
+  - first:
+      213: -3228696346355786904
+    second: planeta azul_21
+  - first:
+      213: -4999857523473686069
+    second: planeta azul_22
+  - first:
+      213: 8514560351831523393
+    second: planeta azul_23
+  - first:
+      213: -5691030107465762621
+    second: planeta azul_24
+  - first:
+      213: 8616864962718416198
+    second: planeta azul_25
+  - first:
+      213: -2132241605958039042
+    second: planeta azul_26
+  - first:
+      213: 2545043394801573902
+    second: planeta azul_27
+  - first:
+      213: -3244476555473785183
+    second: planeta azul_28
+  - first:
+      213: -4877680776163658642
+    second: planeta azul_29
+  - first:
+      213: -4754099522292358404
+    second: planeta azul_30
+  - first:
+      213: 8958255032541802225
+    second: planeta azul_31
+  - first:
+      213: -1788799654645118339
+    second: planeta azul_32
+  - first:
+      213: 2218080690008458287
+    second: planeta azul_33
+  - first:
+      213: 1210945312027715887
+    second: planeta azul_34
+  - first:
+      213: 7204769318243290978
+    second: planeta azul_35
+  - first:
+      213: -6509424599104704314
+    second: planeta azul_36
+  - first:
+      213: 429731320365628148
+    second: planeta azul_37
+  - first:
+      213: 8994028043698282835
+    second: planeta azul_38
+  - first:
+      213: 2764465771521761525
+    second: planeta azul_39
+  - first:
+      213: 100365329056367476
+    second: planeta azul_40
+  - first:
+      213: -8549937271152266326
+    second: planeta azul_41
+  - first:
+      213: -4352899560473921986
+    second: planeta azul_42
+  - first:
+      213: 4063421240864204515
+    second: planeta azul_43
+  - first:
+      213: -7464309780902248437
+    second: planeta azul_44
+  - first:
+      213: 86406837325912399
+    second: planeta azul_45
+  - first:
+      213: 173179917029218399
+    second: planeta azul_46
+  - first:
+      213: 173099706129342754
+    second: planeta azul_47
+  - first:
+      213: 8392649596336813181
+    second: planeta azul_48
+  - first:
+      213: 5668678951114675293
+    second: planeta azul_49
+  - first:
+      213: 917933151891532299
+    second: planeta azul_50
+  - first:
+      213: -4395246052090927769
+    second: planeta azul_51
+  - first:
+      213: -6152719914807610671
+    second: planeta azul_52
+  - first:
+      213: 5099745695552666009
+    second: planeta azul_53
+  - first:
+      213: -6992159492834509936
+    second: planeta azul_54
+  - first:
+      213: 4542265667804766941
+    second: planeta azul_55
+  - first:
+      213: -5469713404973521753
+    second: planeta azul_56
+  - first:
+      213: 4078493953140620365
+    second: planeta azul_57
+  - first:
+      213: -5852073850404102939
+    second: planeta azul_58
+  - first:
+      213: 5408074322932511085
+    second: planeta azul_59
+  - first:
+      213: 3695857090008074943
+    second: planeta azul_60
+  - first:
+      213: -4631286392853225652
+    second: planeta azul_61
+  - first:
+      213: -1667009228420556834
+    second: planeta azul_62
+  - first:
+      213: -2906448057107696236
+    second: planeta azul_63
+  - first:
+      213: 3695550426487517512
+    second: planeta azul_64
+  - first:
+      213: 6569340718008710573
+    second: planeta azul_65
+  - first:
+      213: -1179567574391616728
+    second: planeta azul_66
+  - first:
+      213: 4955438443465589406
+    second: planeta azul_67
+  - first:
+      213: -4481832356827851835
+    second: planeta azul_68
+  - first:
+      213: 3317787683410878854
+    second: planeta azul_69
+  - first:
+      213: 3482879758164857959
+    second: planeta azul_70
+  - first:
+      213: -1838540155906470804
+    second: planeta azul_71
+  - first:
+      213: 6536388623124685592
+    second: planeta azul_72
+  - first:
+      213: -7433504749872198254
+    second: planeta azul_73
+  - first:
+      213: -1436066286127268614
+    second: planeta azul_74
+  - first:
+      213: 1993107978188138106
+    second: planeta azul_75
+  - first:
+      213: -7035561414393721597
+    second: planeta azul_76
+  - first:
+      213: -7528721093645937699
+    second: planeta azul_77
+  - first:
+      213: -5794676094881554771
+    second: planeta azul_78
+  - first:
+      213: 2305998505858558353
+    second: planeta azul_79
+  - first:
+      213: -8005881976304433979
+    second: planeta azul_80
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: planeta azul_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cea85693306b82a0800000000000000
+      internalID: -6734183043120451897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c440a7821f8750c30800000000000000
+      internalID: 4324995994320766028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_2
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cec5ba1295ee76f0800000000000000
+      internalID: -684857677637628218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6846491bb522ef040800000000000000
+      internalID: 4683218439728555142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_4
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52b464ee95a25b8f0800000000000000
+      internalID: -525467215780754651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_5
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e6e1491c1f6ed0c0800000000000000
+      internalID: -4549076407124105504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_6
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f296e4f9e8953e90800000000000000
+      internalID: -7046557911347719440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92159c449d9afea50800000000000000
+      internalID: 6552642733474402601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_8
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8154bbcc80ea2120800000000000000
+      internalID: 2389969447591104909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_9
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 642c923faabd575e0800000000000000
+      internalID: -1912380939478384058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_10
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b37e34b86f1bb3a50800000000000000
+      internalID: 6501986159495997243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_11
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a84a473db62b9220800000000000000
+      internalID: 2493629412797991079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_12
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 856b6f2da8e4882b0800000000000000
+      internalID: -5582125379973892520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_13
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df98a3352318c9850800000000000000
+      internalID: 6385120424849213949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_14
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f7fae89f621845a0800000000000000
+      internalID: -6536954588612069385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_15
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf187584e9f2fff0800000000000000
+      internalID: -3665889786847268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_16
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1d9c6682302ca570800000000000000
+      internalID: 8479187599807520029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_17
+      rect:
+        serializedVersion: 2
+        x: 3400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89446e10cccf6a500800000000000000
+      internalID: 407290769459004568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_18
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c63d885a6d12b70800000000000000
+      internalID: 8872608747350092839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_19
+      rect:
+        serializedVersion: 2
+        x: 3800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda47f728876bfc40800000000000000
+      internalID: 5547141200520628957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_20
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c4fa17f986bc76a0800000000000000
+      internalID: -6450079862628879165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_21
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86b9cd387cd5133d0800000000000000
+      internalID: -3228696346355786904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_22
+      rect:
+        serializedVersion: 2
+        x: 4400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc169c1a210fc9ab0800000000000000
+      internalID: -4999857523473686069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_23
+      rect:
+        serializedVersion: 2
+        x: 4600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1400b85278bc92670800000000000000
+      internalID: 8514560351831523393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_24
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8337605466501b0800000000000000
+      internalID: -5691030107465762621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_25
+      rect:
+        serializedVersion: 2
+        x: 5000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d375c8701459770800000000000000
+      internalID: 8616864962718416198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_26
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef900957e81c862e0800000000000000
+      internalID: -2132241605958039042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_27
+      rect:
+        serializedVersion: 2
+        x: 5400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e002a1dbb7fc15320800000000000000
+      internalID: 2545043394801573902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_28
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aee6e443cd49f2d0800000000000000
+      internalID: -3244476555473785183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_29
+      rect:
+        serializedVersion: 2
+        x: 5800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6473095d2ffe4cb0800000000000000
+      internalID: -4877680776163658642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_30
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2e8ea3cab060eb0800000000000000
+      internalID: -4754099522292358404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_31
+      rect:
+        serializedVersion: 2
+        x: 6200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe620e3d7d125c70800000000000000
+      internalID: 8958255032541802225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_32
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7a498a0138ec27e0800000000000000
+      internalID: -1788799654645118339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_33
+      rect:
+        serializedVersion: 2
+        x: 6600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f248b1bb2a438ce10800000000000000
+      internalID: 2218080690008458287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_34
+      rect:
+        serializedVersion: 2
+        x: 6800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2926dd68542ec010800000000000000
+      internalID: 1210945312027715887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_35
+      rect:
+        serializedVersion: 2
+        x: 7000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f468eb58b7cf360800000000000000
+      internalID: 7204769318243290978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_36
+      rect:
+        serializedVersion: 2
+        x: 7200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c0bc26c0d0e9a5a0800000000000000
+      internalID: -6509424599104704314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_37
+      rect:
+        serializedVersion: 2
+        x: 7400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fab04beb56b6f500800000000000000
+      internalID: 429731320365628148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_38
+      rect:
+        serializedVersion: 2
+        x: 7600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 351a9847ad431dc70800000000000000
+      internalID: 8994028043698282835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_39
+      rect:
+        serializedVersion: 2
+        x: 7800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0e741f8fa5d5620800000000000000
+      internalID: 2764465771521761525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_40
+      rect:
+        serializedVersion: 2
+        x: 8000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4738b2a2cb1946100800000000000000
+      internalID: 100365329056367476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_41
+      rect:
+        serializedVersion: 2
+        x: 8200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3b815f955885980800000000000000
+      internalID: -8549937271152266326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_42
+      rect:
+        serializedVersion: 2
+        x: 8400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e367ff299e46793c0800000000000000
+      internalID: -4352899560473921986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_43
+      rect:
+        serializedVersion: 2
+        x: 8600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e6ec72f61c246830800000000000000
+      internalID: 4063421240864204515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_44
+      rect:
+        serializedVersion: 2
+        x: 8800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0009d74dc1796890800000000000000
+      internalID: -7464309780902248437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_45
+      rect:
+        serializedVersion: 2
+        x: 9000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49d9fc8f8af23100800000000000000
+      internalID: 86406837325912399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_46
+      rect:
+        serializedVersion: 2
+        x: 9200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5812cc8732476200800000000000000
+      internalID: 173179917029218399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_47
+      rect:
+        serializedVersion: 2
+        x: 9400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 221609ef349f66200800000000000000
+      internalID: 173099706129342754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_48
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d743bf9775ea87470800000000000000
+      internalID: 8392649596336813181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_49
+      rect:
+        serializedVersion: 2
+        x: 9800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d549cead8713bae40800000000000000
+      internalID: 5668678951114675293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_50
+      rect:
+        serializedVersion: 2
+        x: 10000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0aac0696572dbc00800000000000000
+      internalID: 917933151891532299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_51
+      rect:
+        serializedVersion: 2
+        x: 10200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765aeaca003f003c0800000000000000
+      internalID: -4395246052090927769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_52
+      rect:
+        serializedVersion: 2
+        x: 10400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2bb6306d52d9aa0800000000000000
+      internalID: -6152719914807610671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_53
+      rect:
+        serializedVersion: 2
+        x: 10600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9997e34c0bfe5c640800000000000000
+      internalID: 5099745695552666009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_54
+      rect:
+        serializedVersion: 2
+        x: 10800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b39b0ccfbd6fe90800000000000000
+      internalID: -6992159492834509936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_55
+      rect:
+        serializedVersion: 2
+        x: 11000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd2a4f41f8e590f30800000000000000
+      internalID: 4542265667804766941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_56
+      rect:
+        serializedVersion: 2
+        x: 11200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a46c5153aca714b0800000000000000
+      internalID: -5469713404973521753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_57
+      rect:
+        serializedVersion: 2
+        x: 11400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4c768f34a8b99830800000000000000
+      internalID: 4078493953140620365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_58
+      rect:
+        serializedVersion: 2
+        x: 11600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ec9f43b6d149cea0800000000000000
+      internalID: -5852073850404102939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_59
+      rect:
+        serializedVersion: 2
+        x: 11800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d61bd4981f65d0b40800000000000000
+      internalID: 5408074322932511085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_60
+      rect:
+        serializedVersion: 2
+        x: 12000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fba4a8e11725a4330800000000000000
+      internalID: 3695857090008074943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_61
+      rect:
+        serializedVersion: 2
+        x: 12200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4f12e4309d5abfb0800000000000000
+      internalID: -4631286392853225652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_62
+      rect:
+        serializedVersion: 2
+        x: 12400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7d1be50f79dd8e0800000000000000
+      internalID: -1667009228420556834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_63
+      rect:
+        serializedVersion: 2
+        x: 12600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 495b8fd14e83aa7d0800000000000000
+      internalID: -2906448057107696236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_64
+      rect:
+        serializedVersion: 2
+        x: 12800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 841f454788b394330800000000000000
+      internalID: 3695550426487517512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_65
+      rect:
+        serializedVersion: 2
+        x: 13000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da53b61c39cfa2b50800000000000000
+      internalID: 6569340718008710573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_66
+      rect:
+        serializedVersion: 2
+        x: 13200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b81db6a8551afe0800000000000000
+      internalID: -1179567574391616728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_67
+      rect:
+        serializedVersion: 2
+        x: 13400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e92c411620145c440800000000000000
+      internalID: 4955438443465589406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_68
+      rect:
+        serializedVersion: 2
+        x: 13600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c39c6c97355dc1c0800000000000000
+      internalID: -4481832356827851835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_69
+      rect:
+        serializedVersion: 2
+        x: 13800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6812fd5d1562b0e20800000000000000
+      internalID: 3317787683410878854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_70
+      rect:
+        serializedVersion: 2
+        x: 14000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76490dcdfaca55030800000000000000
+      internalID: 3482879758164857959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_71
+      rect:
+        serializedVersion: 2
+        x: 14200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6c47ed18713c76e0800000000000000
+      internalID: -1838540155906470804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_72
+      rect:
+        serializedVersion: 2
+        x: 14400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 813604b42dae5ba50800000000000000
+      internalID: 6536388623124685592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_73
+      rect:
+        serializedVersion: 2
+        x: 14600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d40bb70d2e6d890800000000000000
+      internalID: -7433504749872198254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_74
+      rect:
+        serializedVersion: 2
+        x: 14800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc38754251121ce0800000000000000
+      internalID: -1436066286127268614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_75
+      rect:
+        serializedVersion: 2
+        x: 15000
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a76a6ee6521f8ab10800000000000000
+      internalID: 1993107978188138106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_76
+      rect:
+        serializedVersion: 2
+        x: 15200
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d0e9b6b2aac5e90800000000000000
+      internalID: -7035561414393721597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_77
+      rect:
+        serializedVersion: 2
+        x: 15400
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd35e30ed0c948790800000000000000
+      internalID: -7528721093645937699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_78
+      rect:
+        serializedVersion: 2
+        x: 15600
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dae13201bcc259fa0800000000000000
+      internalID: -5794676094881554771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_79
+      rect:
+        serializedVersion: 2
+        x: 15800
+        y: 0
+        width: 201
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199e7426c6d800020800000000000000
+      internalID: 2305998505858558353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planeta azul_80
+      rect:
+        serializedVersion: 2
+        x: 16000
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c40ca072c465e090800000000000000
+      internalID: -8005881976304433979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      planeta azul_0: -6734183043120451897
+      planeta azul_1: 4324995994320766028
+      planeta azul_10: 6501986159495997243
+      planeta azul_11: 2493629412797991079
+      planeta azul_12: -5582125379973892520
+      planeta azul_13: 6385120424849213949
+      planeta azul_14: -6536954588612069385
+      planeta azul_15: -3665889786847268
+      planeta azul_16: 8479187599807520029
+      planeta azul_17: 407290769459004568
+      planeta azul_18: 8872608747350092839
+      planeta azul_19: 5547141200520628957
+      planeta azul_2: -684857677637628218
+      planeta azul_20: -6450079862628879165
+      planeta azul_21: -3228696346355786904
+      planeta azul_22: -4999857523473686069
+      planeta azul_23: 8514560351831523393
+      planeta azul_24: -5691030107465762621
+      planeta azul_25: 8616864962718416198
+      planeta azul_26: -2132241605958039042
+      planeta azul_27: 2545043394801573902
+      planeta azul_28: -3244476555473785183
+      planeta azul_29: -4877680776163658642
+      planeta azul_3: 4683218439728555142
+      planeta azul_30: -4754099522292358404
+      planeta azul_31: 8958255032541802225
+      planeta azul_32: -1788799654645118339
+      planeta azul_33: 2218080690008458287
+      planeta azul_34: 1210945312027715887
+      planeta azul_35: 7204769318243290978
+      planeta azul_36: -6509424599104704314
+      planeta azul_37: 429731320365628148
+      planeta azul_38: 8994028043698282835
+      planeta azul_39: 2764465771521761525
+      planeta azul_4: -525467215780754651
+      planeta azul_40: 100365329056367476
+      planeta azul_41: -8549937271152266326
+      planeta azul_42: -4352899560473921986
+      planeta azul_43: 4063421240864204515
+      planeta azul_44: -7464309780902248437
+      planeta azul_45: 86406837325912399
+      planeta azul_46: 173179917029218399
+      planeta azul_47: 173099706129342754
+      planeta azul_48: 8392649596336813181
+      planeta azul_49: 5668678951114675293
+      planeta azul_5: -4549076407124105504
+      planeta azul_50: 917933151891532299
+      planeta azul_51: -4395246052090927769
+      planeta azul_52: -6152719914807610671
+      planeta azul_53: 5099745695552666009
+      planeta azul_54: -6992159492834509936
+      planeta azul_55: 4542265667804766941
+      planeta azul_56: -5469713404973521753
+      planeta azul_57: 4078493953140620365
+      planeta azul_58: -5852073850404102939
+      planeta azul_59: 5408074322932511085
+      planeta azul_6: -7046557911347719440
+      planeta azul_60: 3695857090008074943
+      planeta azul_61: -4631286392853225652
+      planeta azul_62: -1667009228420556834
+      planeta azul_63: -2906448057107696236
+      planeta azul_64: 3695550426487517512
+      planeta azul_65: 6569340718008710573
+      planeta azul_66: -1179567574391616728
+      planeta azul_67: 4955438443465589406
+      planeta azul_68: -4481832356827851835
+      planeta azul_69: 3317787683410878854
+      planeta azul_7: 6552642733474402601
+      planeta azul_70: 3482879758164857959
+      planeta azul_71: -1838540155906470804
+      planeta azul_72: 6536388623124685592
+      planeta azul_73: -7433504749872198254
+      planeta azul_74: -1436066286127268614
+      planeta azul_75: 1993107978188138106
+      planeta azul_76: -7035561414393721597
+      planeta azul_77: -7528721093645937699
+      planeta azul_78: -5794676094881554771
+      planeta azul_79: 2305998505858558353
+      planeta azul_8: 2389969447591104909
+      planeta azul_80: -8005881976304433979
+      planeta azul_9: -1912380939478384058
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

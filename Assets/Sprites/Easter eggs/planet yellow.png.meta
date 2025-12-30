@@ -1,0 +1,858 @@
+fileFormatVersion: 2
+guid: 5a2b203f59306ac4cb3c105ec9097136
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6684091456813759714
+    second: planet yellow_0
+  - first:
+      213: -4844899724026772159
+    second: planet yellow_1
+  - first:
+      213: -9001680231009885071
+    second: planet yellow_2
+  - first:
+      213: -6354057448593523266
+    second: planet yellow_3
+  - first:
+      213: 4621293757692305818
+    second: planet yellow_4
+  - first:
+      213: 4660772689017671286
+    second: planet yellow_5
+  - first:
+      213: -5257714368510953943
+    second: planet yellow_6
+  - first:
+      213: -5425010582993012275
+    second: planet yellow_7
+  - first:
+      213: -1508689615896772980
+    second: planet yellow_8
+  - first:
+      213: 2427251593471207893
+    second: planet yellow_9
+  - first:
+      213: 8229039787631214505
+    second: planet yellow_10
+  - first:
+      213: -1236518218561153142
+    second: planet yellow_11
+  - first:
+      213: -1725152933375338727
+    second: planet yellow_12
+  - first:
+      213: 5081300293535460407
+    second: planet yellow_13
+  - first:
+      213: -9018436895858140482
+    second: planet yellow_14
+  - first:
+      213: -6444147397884767629
+    second: planet yellow_15
+  - first:
+      213: 4766578213562552508
+    second: planet yellow_16
+  - first:
+      213: -8891789624016571670
+    second: planet yellow_17
+  - first:
+      213: 3170498590930550092
+    second: planet yellow_18
+  - first:
+      213: 3181345771424782058
+    second: planet yellow_19
+  - first:
+      213: 4928664325229269812
+    second: planet yellow_20
+  - first:
+      213: -8569784709745773980
+    second: planet yellow_21
+  - first:
+      213: -2965548662597692004
+    second: planet yellow_22
+  - first:
+      213: -381414451668236524
+    second: planet yellow_23
+  - first:
+      213: 7435737073274479291
+    second: planet yellow_24
+  - first:
+      213: -3046625706650579559
+    second: planet yellow_25
+  - first:
+      213: 43590122922008654
+    second: planet yellow_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: planet yellow_0
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 117
+        width: 427
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13846edb365d33a0800000000000000
+      internalID: -6684091456813759714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_1
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 114
+        width: 425
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1450ff0de5573ccb0800000000000000
+      internalID: -4844899724026772159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_2
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 117
+        width: 429
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174eff8d58b931380800000000000000
+      internalID: -9001680231009885071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_3
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 120
+        width: 429
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebd782e6a6ad1d7a0800000000000000
+      internalID: -6354057448593523266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_4
+      rect:
+        serializedVersion: 2
+        x: 2489
+        y: 116
+        width: 425
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a91eafd1032222040800000000000000
+      internalID: 4621293757692305818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_5
+      rect:
+        serializedVersion: 2
+        x: 3084
+        y: 117
+        width: 425
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67e8dbb11146ea040800000000000000
+      internalID: 4660772689017671286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_6
+      rect:
+        serializedVersion: 2
+        x: 3682
+        y: 120
+        width: 435
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 926ff6e63a8d807b0800000000000000
+      internalID: -5257714368510953943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_7
+      rect:
+        serializedVersion: 2
+        x: 4281
+        y: 113
+        width: 439
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc977f12e9d76b4b0800000000000000
+      internalID: -5425010582993012275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_8
+      rect:
+        serializedVersion: 2
+        x: 4881
+        y: 114
+        width: 434
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8ef628a9ce001be0800000000000000
+      internalID: -1508689615896772980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_9
+      rect:
+        serializedVersion: 2
+        x: 5483
+        y: 112
+        width: 436
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d92a51d6745fa120800000000000000
+      internalID: 2427251593471207893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_10
+      rect:
+        serializedVersion: 2
+        x: 6082
+        y: 115
+        width: 436
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9af7058661c633270800000000000000
+      internalID: 8229039787631214505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_11
+      rect:
+        serializedVersion: 2
+        x: 6681
+        y: 113
+        width: 439
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a871d584b3107dee0800000000000000
+      internalID: -1236518218561153142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_12
+      rect:
+        serializedVersion: 2
+        x: 7287
+        y: 113
+        width: 426
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91790fe1c860f08e0800000000000000
+      internalID: -1725152933375338727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_13
+      rect:
+        serializedVersion: 2
+        x: 7888
+        y: 115
+        width: 430
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73ce441f1b7648640800000000000000
+      internalID: 5081300293535460407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_14
+      rect:
+        serializedVersion: 2
+        x: 8490
+        y: 118
+        width: 427
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba5919cc6318d280800000000000000
+      internalID: -9018436895858140482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_15
+      rect:
+        serializedVersion: 2
+        x: 9088
+        y: 119
+        width: 425
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37212dc851ac196a0800000000000000
+      internalID: -6444147397884767629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_16
+      rect:
+        serializedVersion: 2
+        x: 9686
+        y: 121
+        width: 429
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb0138d71a9462240800000000000000
+      internalID: 4766578213562552508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_17
+      rect:
+        serializedVersion: 2
+        x: 10287
+        y: 117
+        width: 429
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2fcfa92740a9480800000000000000
+      internalID: -8891789624016571670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_18
+      rect:
+        serializedVersion: 2
+        x: 10887
+        y: 116
+        width: 426
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4dba41abafdffb20800000000000000
+      internalID: 3170498590930550092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_19
+      rect:
+        serializedVersion: 2
+        x: 11492
+        y: 117
+        width: 425
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae61775af19662c20800000000000000
+      internalID: 3181345771424782058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_20
+      rect:
+        serializedVersion: 2
+        x: 12084
+        y: 122
+        width: 435
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4335e623712266440800000000000000
+      internalID: 4928664325229269812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_21
+      rect:
+        serializedVersion: 2
+        x: 12681
+        y: 117
+        width: 439
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 462770e0632021980800000000000000
+      internalID: -8569784709745773980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_22
+      rect:
+        serializedVersion: 2
+        x: 13286
+        y: 114
+        width: 434
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95dab9143148d6d0800000000000000
+      internalID: -2965548662597692004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_23
+      rect:
+        serializedVersion: 2
+        x: 13882
+        y: 114
+        width: 436
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4174d18b391f4baf0800000000000000
+      internalID: -381414451668236524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_24
+      rect:
+        serializedVersion: 2
+        x: 14483
+        y: 116
+        width: 436
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb26abfc87b013760800000000000000
+      internalID: 7435737073274479291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_25
+      rect:
+        serializedVersion: 2
+        x: 15081
+        y: 113
+        width: 439
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99dc48fbf0638b5d0800000000000000
+      internalID: -3046625706650579559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: planet yellow_26
+      rect:
+        serializedVersion: 2
+        x: 15688
+        y: 112
+        width: 426
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e406b706cfcda9000800000000000000
+      internalID: 43590122922008654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      planet yellow_0: -6684091456813759714
+      planet yellow_1: -4844899724026772159
+      planet yellow_10: 8229039787631214505
+      planet yellow_11: -1236518218561153142
+      planet yellow_12: -1725152933375338727
+      planet yellow_13: 5081300293535460407
+      planet yellow_14: -9018436895858140482
+      planet yellow_15: -6444147397884767629
+      planet yellow_16: 4766578213562552508
+      planet yellow_17: -8891789624016571670
+      planet yellow_18: 3170498590930550092
+      planet yellow_19: 3181345771424782058
+      planet yellow_2: -9001680231009885071
+      planet yellow_20: 4928664325229269812
+      planet yellow_21: -8569784709745773980
+      planet yellow_22: -2965548662597692004
+      planet yellow_23: -381414451668236524
+      planet yellow_24: 7435737073274479291
+      planet yellow_25: -3046625706650579559
+      planet yellow_26: 43590122922008654
+      planet yellow_3: -6354057448593523266
+      planet yellow_4: 4621293757692305818
+      planet yellow_5: 4660772689017671286
+      planet yellow_6: -5257714368510953943
+      planet yellow_7: -5425010582993012275
+      planet yellow_8: -1508689615896772980
+      planet yellow_9: 2427251593471207893
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

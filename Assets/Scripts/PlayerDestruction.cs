@@ -13,12 +13,15 @@ public class PlayerDestruction : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
     public PlayerControl playerControl;
+    private FinalScore finalScore;
+    public Animator animationCamera;
 
     SoundManager soundManager;
 
     void Start()
     {
         soundManager = FindFirstObjectByType<SoundManager>();
+        finalScore = FindFirstObjectByType<FinalScore>();
         //spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -28,6 +31,12 @@ public class PlayerDestruction : MonoBehaviour
         {
             Debug.LogError("No se encontró un SpriteRenderer o el sprite es nulo.");
             return;
+        }
+
+        if (finalScore.isBackgroundBlackHole)
+        {
+            finalScore.isBackgroundBlackHole = false;
+            spriteRenderer.color = Color.black;
         }
 
         Texture2D texture = spriteRenderer.sprite.texture;
@@ -80,6 +89,7 @@ public class PlayerDestruction : MonoBehaviour
             Instantiate(explosion, playerControl.transform.position, Quaternion.identity);
             soundManager.SelectClip(0, 1f);
             DestroyPlayer();
+            animationCamera.CrossFadeInFixedTime("camara", 0f);
             DEATH = true;
             playerControl.START = false;
             //Invoke("TimeDestruccion", 2);

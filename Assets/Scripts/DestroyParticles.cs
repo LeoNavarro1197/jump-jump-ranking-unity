@@ -8,12 +8,6 @@ public class DestroyParticles : MonoBehaviour
         Invoke("DestroyParticle", 2f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void DestroyParticle()
     {
         Destroy(gameObject);

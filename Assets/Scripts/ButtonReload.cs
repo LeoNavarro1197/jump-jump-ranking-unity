@@ -12,8 +12,9 @@ public class ButtonReload : MonoBehaviour
     public GameObject buttonLeft, buttonRight;
     public bool resetBackground = false;
 
-    [SerializeField] Animator animationRedPlanet;
+    [SerializeField] Animator animationRedPlanet, animationBluePlanet, animationYellowPlanet, animationBlackHolePlanet;
     [SerializeField] SpriteRenderer[] sprites;
+    [SerializeField] SpriteRenderer spritePlayerDestruction, spritePlayer;
 
     public void ButtonReloaded()
     {
@@ -39,12 +40,18 @@ public class ButtonReload : MonoBehaviour
         resetBackground = true;
 
         animationRedPlanet.SetBool("isMovement", false);
+        animationBluePlanet.SetBool("isMovement", false);
+        animationYellowPlanet.SetBool("isMovement", false);
+        animationBlackHolePlanet.SetBool("isMovement", false);
         SpriteToWhite();
     }
 
     void SpriteToWhite()
     {
-        for(int i = 0; i < sprites.Length; i++)
+        spritePlayer.color = Color.white;
+        spritePlayerDestruction.color = Color.white;
+
+        for (int i = 0; i < sprites.Length; i++)
         {
             sprites[i].color = Color.white;
         }

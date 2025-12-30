@@ -1,4 +1,3 @@
-using System.Threading;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -21,18 +20,47 @@ public class VolumeSettings : MonoBehaviour
         playerControl = FindFirstObjectByType<PlayerControl>();
         playerDestruction = FindFirstObjectByType<PlayerDestruction>();
 
+        // Asignamos los listeners
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
         SFXSlider.onValueChanged.AddListener(SetSFXVolume);
     }
 
+    private void Start()
+    {
+        // Cargamos los valores guardados (o 1 por defecto)
+        float savedMusic = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        float savedSFX = PlayerPrefs.GetFloat("SFXVolume", 1f);
+
+        // Aplicamos los valores a los sliders (esto disparará SetMusicVolume y SetSFXVolume automáticamente)
+        musicSlider.value = savedMusic;
+        SFXSlider.value = savedSFX;
+
+        // Por si acaso, forzamos la carga inicial al mixer
+        ApplyVolume("Music", savedMusic, mixer);
+        ApplyVolume("SFX", savedSFX, mixerSFX);
+    }
+
+    // Eliminamos OnDisable y guardamos directamente en las funciones
     void SetMusicVolume(float value)
     {
-        mixer.SetFloat("Music", Mathf.Log10(value) * 20); 
+        ApplyVolume("Music", value, mixer);
+        PlayerPrefs.SetFloat("MusicVolume", value);
+        PlayerPrefs.Save(); // Forzamos el guardado en Android
     }
 
     void SetSFXVolume(float value)
     {
-        mixerSFX.SetFloat("SFX", Mathf.Log10(value) * 20);
+        ApplyVolume("SFX", value, mixerSFX);
+        PlayerPrefs.SetFloat("SFXVolume", value);
+        PlayerPrefs.Save(); // Forzamos el guardado en Android
+    }
+
+    // Función auxiliar para evitar repetir código y manejar el Log10(0)
+    void ApplyVolume(string parameterName, float value, AudioMixer targetMixer)
+    {
+        // Clamp para evitar Log10 de 0 que da -Infinity
+        float volume = Mathf.Log10(Mathf.Clamp(value, 0.0001f, 1f)) * 20;
+        targetMixer.SetFloat(parameterName, volume);
     }
 
     void Update()
@@ -59,7 +87,6 @@ public class VolumeSettings : MonoBehaviour
             flagPlayMusic = true;
         }
 
-        // Music Slow Apagada
         if (playerControl.isMusicSlow)
         {
             clipMusicSlow.mute = true;
