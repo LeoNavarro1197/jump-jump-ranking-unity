@@ -14,7 +14,7 @@ public class ButtonReload : MonoBehaviour
 
     [SerializeField] Animator animationRedPlanet, animationBluePlanet, animationYellowPlanet, animationBlackHolePlanet;
     [SerializeField] SpriteRenderer[] sprites;
-    [SerializeField] SpriteRenderer spritePlayerDestruction, spritePlayer;
+    [SerializeField] public SpriteRenderer spritePlayerDestruction, spritePlayer;
 
     public void ButtonReloaded()
     {
@@ -29,8 +29,8 @@ public class ButtonReload : MonoBehaviour
 
         playerControl.moveDirection = 0;
 
-        buttonLeft.SetActive(true);
-        buttonRight.SetActive(true);
+        //buttonLeft.SetActive(true);
+        //buttonRight.SetActive(true);
 
         playerControl.CoroutineStart();
         playerDestruction.DEATH = false;

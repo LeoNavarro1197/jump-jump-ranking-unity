@@ -38,6 +38,8 @@ public class FinalScore : MonoBehaviour
 
             if (scoreInt > highscoreLocal)
             {
+                soundManager.SelectClip(8, 1f);
+                profileUserscoreTxt.fontSize = 21;
                 PlayerPrefs.SetInt("CurrentScore", scoreInt);
                 PlayerPrefs.Save();
                 profileUserscoreTxt.text = scoreInt.ToString();
@@ -78,6 +80,7 @@ public class FinalScore : MonoBehaviour
     void ResetSizeText()
     {
         scoreText.fontSize = 60;
+        profileUserscoreTxt.fontSize = 20;
     }
 
     void onApplicationChange()
@@ -87,7 +90,7 @@ public class FinalScore : MonoBehaviour
         changeColor.hasStartedLerpBackgroundYellow = false;
         changeColor.hasStartedLerpBackgroundBlackHole = false;
         changeColor.hasStartedLerpBackgroundNormal = false;
-        scoreText.fontSize = 90;
+        scoreText.fontSize = 100;
         soundManager.SelectClip(5, 1.5f);
         Invoke("ResetSizeText", .1f);
     }

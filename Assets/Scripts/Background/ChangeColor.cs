@@ -8,6 +8,7 @@ public class ChangeColor : MonoBehaviour
     private SpriteRenderer player;
     [SerializeField] float lerpDuration = 1f;
     [SerializeField] SpriteRenderer[] spritesBuildings;
+    [SerializeField] SpriteRenderer spritePlayerDestruction;
 
     [Header("Red Assets")]
     [SerializeField] GameObject redPlanet;
@@ -42,7 +43,6 @@ public class ChangeColor : MonoBehaviour
     [SerializeField] string[] hexColorBlackHoleBuildings;
 
     [Header("Normal Colors")]
-    [SerializeField] SpriteRenderer spritePlayerDestruction;
     public bool hasStartedLerpBackgroundNormal = false;
     [SerializeField] string[] hexColorNormalBuildings;
 
@@ -136,6 +136,7 @@ public class ChangeColor : MonoBehaviour
                 blackHolePlanet.SetActive(true);
                 animationBlackHolePlanet.SetBool("isMovement", true);
                 player.color = Color.black;
+                spritePlayerDestruction.color = Color.black;
 
                 // Background color: #FF0000
                 // Left/Right: #000000

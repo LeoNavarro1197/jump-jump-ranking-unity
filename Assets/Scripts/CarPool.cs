@@ -65,8 +65,8 @@ public class CarPool : MonoBehaviour
             }
         }
         // añadimos una posicion mas a la lista. se instancian mas carros de la lista
-        //AddCarToPool(1);
-        //carList[carList.Count - 1].SetActive(true);
+        AddCarToPool(1);
+        carList[carList.Count - 1].SetActive(true);
         return carList[carList.Count - 1];
     }
 
@@ -79,7 +79,7 @@ public class CarPool : MonoBehaviour
             i--;
             yield return new WaitForSeconds(amountTime);
             GameObject car = Instance.RequestCar(); // guardo la instancia del carro en un gameobject
-            int random = Random.Range(0, poolSize);
+            int random = Random.Range(0, poolSize - 1);
             car.transform.position = pointList[random].transform.position; // se posicionan los carros en una lista de posiciones random de la jerarquia
             car.SetActive(true);
             i++;

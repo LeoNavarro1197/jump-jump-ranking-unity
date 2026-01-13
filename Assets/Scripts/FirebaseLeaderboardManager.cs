@@ -5,12 +5,11 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Windows;
 
 public class FirebaseLeaderboardManager : MonoBehaviour
 {
-    // ... (Variables existentes se mantienen igual)
-    public GameObject loadPanel, soundManagerObject, usernamePanel, userprofilePanel, leaderboardPanel, optionsPanel, bloqueadorPanel, startPanel, spinner, leadreboardContent, noInternetPanel, userDataPrefab, buttonLeft, buttonRight, buttonReload;
+    public GameObject loadPanel, soundManagerObject, usernamePanel, userprofilePanel, leaderboardPanel, optionsPanel, bloqueadorPanel, startPanel, spinner, 
+        leadreboardContent, noInternetPanel, userDataPrefab, buttonLeft, buttonRight, buttonReload;
     public TMP_Text profileUsernameTxt, profileUserscoreTxt, errorUsernameTxt, rankTxt;
     public TMP_InputField usernameInput;
 
@@ -57,10 +56,10 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 
     public void ShowLeaderboard()
     {
+        soundManager.SelectClip(6, .5f);
+
         buttonLeft.SetActive(false);
         buttonRight.SetActive(false);
-
-        soundManager.SelectClip(6, .5f);
 
         if (noInternet.isThereInternet)
         {
@@ -75,6 +74,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
     public void SignInWithUsername()
     {
         soundManager.SelectClip(3, 1f);
+
         if (!noInternet.isThereInternet)
         {
             errorUsernameTxt.text = "You are not connected to the internet";
@@ -82,13 +82,12 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         else
         {
             StartCoroutine(CheckUserExistInDatabase());
-        }    
+        }
     }
 
     public void CloseLeaderboard()
     {
-        buttonLeft.SetActive(true);
-        buttonRight.SetActive(true);
+        soundManager.SelectClip(7, .5f);
 
         if (leadreboardContent.transform.childCount > 0)
         {
@@ -101,19 +100,19 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         leaderboardPanel.SetActive(false);
         userprofilePanel.SetActive(true);
         startPanel.SetActive(false);
-        buttonLeft.SetActive(true);
-        buttonRight.SetActive(true);
         buttonReload.SetActive(true);
     }
 
     public void OpenOptions()
     {
+        soundManager.SelectClip(6, .5f);
         optionsPanel.SetActive(true);
         bloqueadorPanel.SetActive(true);
     }
 
     public void CloseOptions()
     {
+        soundManager.SelectClip(7, .5f);
         optionsPanel.SetActive(false);
         bloqueadorPanel.SetActive(false);
     }
@@ -141,19 +140,17 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         db.ChildAdded += HandleChildAdded;
         GetTotalUsers();
 
-        int playerID = PlayerPrefs.GetInt("PlayerID");
-        if (playerID != 0)
+        int playerID = PlayerPrefs.GetInt("PlayerID", -1); // [MODIFICADO] Default a -1 para evitar conflictos con User_0
+        if (playerID != -1)
         {
             db.Child("User_" + playerID.ToString()).Child("score").ValueChanged += HandleScoreChanged;
+            StartCoroutine(FetchUserProfileData(playerID)); // [NUEVO] Mover aquí para asegurar orden
         }
-
-        StartCoroutine(FetchUserProfileData(playerID));
 
         SyncOfflineScore();
         noInternetPanel.SetActive(false);
     }
 
-    // [NUEVO CODIGO] Modificado para actualizar la UI apenas termine la subida
     public void SyncOfflineScore()
     {
         int localHighScore = PlayerPrefs.GetInt("CurrentScore", 0);
@@ -177,7 +174,6 @@ public class FirebaseLeaderboardManager : MonoBehaviour
                                 if (updateTask.IsCompleted)
                                 {
                                     Debug.Log("Sincronización Exitosa: Puntaje offline subido a Firebase.");
-                                    // [NUEVO CODIGO] Actualizamos la variable score local para que coincida
                                     score = localHighScore;
                                 }
                             });
@@ -200,8 +196,8 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         {
             int cloudScore = int.Parse(args.Snapshot.Value.ToString());
 
-            // [NUEVO CODIGO] Solo actualizamos la UI si lo que viene de la nube es mayor o igual a lo que tenemos
-            if (cloudScore >= PlayerPrefs.GetInt("CurrentScore", 0))
+            // [MODIFICADO] Solo actualizamos si la nube es mayor al récord local guardado
+            if (cloudScore > PlayerPrefs.GetInt("CurrentScore", 0))
             {
                 score = cloudScore;
                 profileUserscoreTxt.text = score.ToString();
@@ -214,13 +210,11 @@ public class FirebaseLeaderboardManager : MonoBehaviour
     public void ListenForScoreUpdates()
     {
         string username = PlayerPrefs.GetString("Username");
-
         if (string.IsNullOrEmpty(username)) return;
 
         db.OrderByChild("username").EqualTo(username).ValueChanged += (object sender, ValueChangedEventArgs args) =>
         {
             if (args.DatabaseError != null) return;
-
             foreach (DataSnapshot childSnapshot in args.Snapshot.Children)
             {
                 if (childSnapshot.Exists)
@@ -271,7 +265,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         db.ValueChanged += (object sender2, ValueChangedEventArgs e2) =>
         {
             if (e2.DatabaseError != null) return;
-            totalUsers = int.Parse(e2.Snapshot.ChildrenCount.ToString());
+            totalUsers = (int)e2.Snapshot.ChildrenCount; // [MODIFICADO] Casteo directo
         };
     }
 
@@ -302,34 +296,35 @@ public class FirebaseLeaderboardManager : MonoBehaviour
                 else
                 {
                     errorUsernameTxt.text = "";
-                    PushUserData();
-                    PlayerPrefs.SetInt("PlayerID", totalUsers + 1);
+                    int targetID = totalUsers; // [MODIFICADO] Guardar ID actual
+                    PushUserData(targetID);
+                    PlayerPrefs.SetInt("PlayerID", targetID);
                     PlayerPrefs.SetString("Username", usernameInput.text);
                     PlayerPrefs.SetInt("CurrentScore", 0);
 
-                    StartCoroutine(delayFetchProfile());
+                    StartCoroutine(delayFetchProfile(targetID));
                 }
             }
         }
     }
 
-    IEnumerator delayFetchProfile()
+    IEnumerator delayFetchProfile(int id)
     {
         spinner.SetActive(true);
         yield return new WaitForSeconds(1f);
-        StartCoroutine(FetchUserProfileData(totalUsers));
+        StartCoroutine(FetchUserProfileData(id));
     }
 
-    void PushUserData()
+    void PushUserData(int id)
     {
-        db.Child("User_" + (totalUsers).ToString()).Child("username").SetValueAsync(usernameInput.text);
-        db.Child("User_" + (totalUsers).ToString()).Child("score").SetValueAsync(0);
+        db.Child("User_" + id.ToString()).Child("username").SetValueAsync(usernameInput.text);
+        db.Child("User_" + id.ToString()).Child("score").SetValueAsync(0);
     }
 
     IEnumerator FetchUserProfileData(int playerID)
     {
-        playerID -= 1;
-        if (playerID != 0)
+        // [MODIFICADO] Ya no restamos 1 para evitar errores. Usamos el ID directo.
+        if (playerID != -1)
         {
             var task = db.Child("User_" + playerID.ToString()).GetValueAsync();
             yield return new WaitUntil(() => task.IsCompleted);
@@ -341,11 +336,10 @@ public class FirebaseLeaderboardManager : MonoBehaviour
                 {
                     username = snapshot.Child("username").Value.ToString();
 
-                    // [NUEVO CODIGO] PRIORIDAD LOCAL:
-                    // Si el puntaje local de PlayerPrefs es mayor al de la nube, usamos el local
                     int cloudScore = int.Parse(snapshot.Child("score").Value.ToString());
                     int localScore = PlayerPrefs.GetInt("CurrentScore", 0);
 
+                    // [NUEVO CODIGO] PRIORIDAD LOCAL:
                     if (localScore > cloudScore)
                     {
                         score = localScore;
@@ -365,6 +359,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
                     buttonLeft.SetActive(false);
                     buttonRight.SetActive(false);
                     usernamePanel.SetActive(false);
+                    noInternetPanel.SetActive(false);
                 }
             }
         }

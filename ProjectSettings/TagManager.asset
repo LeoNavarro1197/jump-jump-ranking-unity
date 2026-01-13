@@ -10,6 +10,10 @@ TagManager:
   - SenseLocationB
   - SpawnCollider1
   - SpawnCollider2
+  - ArroundA1
+  - ArroundA2
+  - ArroundB1
+  - ArroundB2
   layers:
   - Default
   - TransparentFX

@@ -142,10 +142,10 @@ TextureImporter:
       name: luna_0
       rect:
         serializedVersion: 2
-        x: 939
-        y: 307
-        width: 390
-        height: 346
+        x: 1879
+        y: 615
+        width: 778
+        height: 690
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

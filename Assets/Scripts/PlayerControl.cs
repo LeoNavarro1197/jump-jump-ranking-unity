@@ -7,6 +7,8 @@ public class PlayerControl : MonoBehaviour
     public CarPool carPool;
     public CarMovementControl carMovementControl;
     public SoundManager soundManager;
+    public ButtonReload buttonReload;
+    public PlayerDestruction playerDestruction;
 
     public float horizontalSpeed = 5f;
     public float airControl = 0.1f;
@@ -19,7 +21,7 @@ public class PlayerControl : MonoBehaviour
     public int countdown;
     public TMP_Text countdownText;
     public GameObject panelCountdown, panelStart, buttonLeft, buttonRight;
-    public Rigidbody2D floor, rbEdificio2, rbNiebla;
+    public Rigidbody2D floor, rbEdificio2, rbNiebla, leftRespawn, rightRespawn;
     public Animator animatorNiebla;
     public GameObject floorGameobject, edificio2, niebla;
 
@@ -38,6 +40,15 @@ public class PlayerControl : MonoBehaviour
         boxCollider2D = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         soundManager = FindFirstObjectByType<SoundManager>();
+    }
+
+    private void Update()
+    {
+        if (playerDestruction.buttonReload.activeSelf && countdownText.isActiveAndEnabled)
+        { 
+            countdownText.gameObject.SetActive(false);
+            playerDestruction.buttonReload.SetActive(true);
+        }
     }
 
     void FixedUpdate()
@@ -81,8 +92,8 @@ public class PlayerControl : MonoBehaviour
     }
 
     // Cambiar la dirección del player
-    public void MoveLeft() { moveDirection = -1; }
-    public void MoveRight() { moveDirection = 1; }
+    public void MoveLeft() { moveDirection = -1; transform.rotation = Quaternion.Euler(0, 0, 0); }
+    public void MoveRight() { moveDirection = 1; transform.rotation = Quaternion.Euler(0, 180, 0); }
     public void StopMoving() { moveDirection = 0; }
 
     // Boton Start en la UI
@@ -95,8 +106,8 @@ public class PlayerControl : MonoBehaviour
     // Funcion para empezar el juego
     public IEnumerator StartCountdown()
     {
-        panelCountdown.SetActive(true);
-        panelStart.SetActive(false);
+        buttonReload.spritePlayerDestruction.color = Color.white;
+        panelCountdown.SetActive(true); panelStart.SetActive(false);
 
         isMusicSlow = true;
 
@@ -114,22 +125,22 @@ public class PlayerControl : MonoBehaviour
         yield return new WaitForSeconds(.5f);
 
         START = true;
+
+        // Reposicionar los puntos de respawn
+        leftRespawn.linearVelocityY = -1f;
+        rightRespawn.linearVelocityY = -1f;
+
         soundManager.SelectClip(2, 1f);
         panelCountdown.SetActive(false);
         rb.AddForce(Vector2.up * firstJump, ForceMode2D.Impulse);
         floor.bodyType = RigidbodyType2D.Dynamic; rbEdificio2.bodyType = RigidbodyType2D.Dynamic; rbNiebla.bodyType = RigidbodyType2D.Dynamic;
-        animatorNiebla.enabled = false;
-        boxCollider2D.enabled = false;
-        buttonRight.SetActive(true);
-        buttonLeft.SetActive(true);
+        animatorNiebla.enabled = false; boxCollider2D.enabled = false; buttonRight.SetActive(true); buttonLeft.SetActive(true);
         Invoke("DesactiveFloor", 2);
     }
 
     void DesactiveFloor()
     {
-        floorGameobject.SetActive(false);
-        edificio2.SetActive(false);
-        niebla.SetActive(false);
+        floorGameobject.SetActive(false); edificio2.SetActive(false); niebla.SetActive(false);
     }
 
     // Aplicar fuerza cuando toca la parte de arriba de un carro

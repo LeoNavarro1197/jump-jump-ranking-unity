@@ -6,8 +6,8 @@ using UnityEngine.Networking;
 public class NoInternet : MonoBehaviour
 {
     FirebaseLeaderboardManager leaderboardManager;
-
     public bool isThereInternet = false;
+    private bool initialized = false; // [NUEVO] Para evitar doble suscripción a eventos
 
     void Start()
     {
@@ -49,9 +49,18 @@ public class NoInternet : MonoBehaviour
                 if (!isThereInternet)
                 {
                     isThereInternet = true;
-                    // [NUEVO CODIGO] Inicializamos y sincronizamos inmediatamente
-                    leaderboardManager.FirebaseInicialize();
-                    leaderboardManager.ListenForScoreUpdates();
+                    // [MODIFICADO] Solo inicializamos una vez los eventos pesados
+                    if (!initialized)
+                    {
+                        leaderboardManager.FirebaseInicialize();
+                        leaderboardManager.ListenForScoreUpdates();
+                        initialized = true;
+                    }
+                    else
+                    {
+                        // Si ya estaba inicializado, solo mandamos el score que hicimos offline
+                        leaderboardManager.SyncOfflineScore();
+                    }
                 }
             }
             yield return new WaitForSeconds(10f);
