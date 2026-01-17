@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: bbb1e254f8abf33408909b7fbb134fa2
+guid: 38038e3899a2fe145a1aac4fca82e3da
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2639810958398084011
-    second: Imagotipo transparente_0
-  - first:
-      213: 6080593304727841758
-    second: Imagotipo transparente_1
-  - first:
-      213: 4949254761170584621
-    second: Imagotipo transparente_2
-  - first:
-      213: 4913452023405947920
-    second: Imagotipo transparente_3
-  - first:
-      213: -4609383361314209262
-    second: Imagotipo transparente_4
-  - first:
-      213: -8633798650969347032
-    second: Imagotipo transparente_5
+      213: 813207059514403940
+    second: Imagotipo fondo negro_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -154,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Imagotipo transparente_0
+      name: Imagotipo fondo negro_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 648
-        height: 1244
+        width: 1883
+        height: 1178
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,118 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 55caf7e6be18d5bd0800000000000000
-      internalID: -2639810958398084011
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Imagotipo transparente_1
-      rect:
-        serializedVersion: 2
-        x: 681
-        y: 191
-        width: 532
-        height: 909
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: edbebefe46b926450800000000000000
-      internalID: 6080593304727841758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Imagotipo transparente_2
-      rect:
-        serializedVersion: 2
-        x: 1155
-        y: 510
-        width: 643
-        height: 368
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d24cb76abf84fa440800000000000000
-      internalID: 4949254761170584621
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Imagotipo transparente_3
-      rect:
-        serializedVersion: 2
-        x: 1045
-        y: 210
-        width: 377
-        height: 287
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 01c290c2596103440800000000000000
-      internalID: 4913452023405947920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Imagotipo transparente_4
-      rect:
-        serializedVersion: 2
-        x: 1422
-        y: 210
-        width: 684
-        height: 287
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2124543214e2800c0800000000000000
-      internalID: -4609383361314209262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Imagotipo transparente_5
-      rect:
-        serializedVersion: 2
-        x: 2115
-        y: 410
-        width: 62
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 82ca9baeed59e2880800000000000000
-      internalID: -8633798650969347032
+      spriteID: 46c22371387194b00800000000000000
+      internalID: 813207059514403940
       vertices: []
       indices: 
       edges: []
@@ -289,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -299,12 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Imagotipo transparente_0: -2639810958398084011
-      Imagotipo transparente_1: 6080593304727841758
-      Imagotipo transparente_2: 4949254761170584621
-      Imagotipo transparente_3: 4913452023405947920
-      Imagotipo transparente_4: -4609383361314209262
-      Imagotipo transparente_5: -8633798650969347032
+      Imagotipo fondo negro_0: 813207059514403940
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

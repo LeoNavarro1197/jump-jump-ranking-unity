@@ -177,8 +177,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.012775388, y: 0.070385344}
-  m_Size: {x: 0.6519356, y: 0.066979855}
+  m_Offset: {x: 0.00522809, y: 0.070385344}
+  m_Size: {x: 0.62174946, y: 0.066979855}
   m_Direction: 1
 --- !u!114 &8305261349286480252
 MonoBehaviour:
@@ -212,7 +212,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8258541174776137527}
   - component: {fileID: 1499851090059949934}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: DownCollision
   m_TagString: DownCollision
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1893389654197583610}
   - component: {fileID: 2847804578886131614}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: rail_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

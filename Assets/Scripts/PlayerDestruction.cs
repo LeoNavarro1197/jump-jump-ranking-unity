@@ -84,8 +84,8 @@ public class PlayerDestruction : MonoBehaviour
             animationCamera.CrossFadeInFixedTime("camara", 0f);
 
             // Reposicionar los puntos de respawn
-            leftRespawn.linearVelocityY = 1f;
-            rightRespawn.linearVelocityY = 1f;
+            //leftRespawn.linearVelocityY = 5f;
+            //rightRespawn.linearVelocityY = 5f;
 
             DEATH = true;
             playerControl.START = false;

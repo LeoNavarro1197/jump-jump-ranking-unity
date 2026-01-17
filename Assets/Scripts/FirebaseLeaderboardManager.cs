@@ -36,7 +36,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 
     void LoadingSession()
     {
-        loadPanel.SetActive(false);
+        //loadPanel.SetActive(false);
         soundManagerObject.SetActive(true);
 
         noInternet.StartCheckInternet();
@@ -45,6 +45,10 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         {
             usernamePanel.SetActive(false);
             spinner.SetActive(true);
+        }
+        else
+        {
+            usernamePanel.SetActive(true);
         }
     }
 
@@ -278,39 +282,39 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         {
             DataSnapshot snapshot = task.Result;
 
+            string input = usernameInput.text;
             if (snapshot != null && snapshot.HasChildren)
             {
                 errorUsernameTxt.text = "This username already exists";
             }
+            else if(usernameInput.text.Length > 13 || usernameInput.text.Length < 3)
+            {
+                errorUsernameTxt.text = "Your username must be between 3 and 13 characters";
+            }
+            else if(!Regex.IsMatch(input, "^[a-zA-Z0-9_]*$"))
+            {
+                errorUsernameTxt.text = "Only letters, numbers and underscore (_) allowed";
+            }
             else
             {
-                string input = usernameInput.text;
-                if (usernameInput.text.Length > 12 || usernameInput.text.Length < 3)
-                {
-                    errorUsernameTxt.text = "Your username must be between 3 and 12 characters";
-                }
-                else if (!Regex.IsMatch(input, "^[a-zA-Z0-9_]*$"))
-                {
-                    errorUsernameTxt.text = "Only letters, numbers and underscore (_) allowed";
-                }
-                else
-                {
-                    errorUsernameTxt.text = "";
-                    int targetID = totalUsers; // [MODIFICADO] Guardar ID actual
-                    PushUserData(targetID);
-                    PlayerPrefs.SetInt("PlayerID", targetID);
-                    PlayerPrefs.SetString("Username", usernameInput.text);
-                    PlayerPrefs.SetInt("CurrentScore", 0);
+                errorUsernameTxt.text = "";
+                int targetID = totalUsers; // [MODIFICADO] Guardar ID actual
+                PushUserData(targetID);
+                PlayerPrefs.SetInt("PlayerID", targetID);
+                PlayerPrefs.SetString("Username", usernameInput.text);
+                PlayerPrefs.SetInt("CurrentScore", 0);
 
-                    StartCoroutine(delayFetchProfile(targetID));
-                }
+                usernamePanel.SetActive(false);
+                spinner.SetActive(true);
+
+                StartCoroutine(delayFetchProfile(targetID));
             }
         }
     }
 
     IEnumerator delayFetchProfile(int id)
     {
-        spinner.SetActive(true);
+        //spinner.SetActive(true);
         yield return new WaitForSeconds(1f);
         StartCoroutine(FetchUserProfileData(id));
     }

@@ -42,15 +42,6 @@ public class PlayerControl : MonoBehaviour
         soundManager = FindFirstObjectByType<SoundManager>();
     }
 
-    private void Update()
-    {
-        if (playerDestruction.buttonReload.activeSelf && countdownText.isActiveAndEnabled)
-        { 
-            countdownText.gameObject.SetActive(false);
-            playerDestruction.buttonReload.SetActive(true);
-        }
-    }
-
     void FixedUpdate()
     {
         if (moveDirection != 0)
@@ -113,7 +104,7 @@ public class PlayerControl : MonoBehaviour
 
         for (int i = countdown; i > 0; i--)
         {
-            // Contéo regresivo
+            // Conteo regresivo
             countdownText.text = i.ToString();
             yield return new WaitForSeconds(1f);
         }
@@ -127,15 +118,20 @@ public class PlayerControl : MonoBehaviour
         START = true;
 
         // Reposicionar los puntos de respawn
-        leftRespawn.linearVelocityY = -1f;
-        rightRespawn.linearVelocityY = -1f;
+        //leftRespawn.linearVelocityY = -5f;
+        //rightRespawn.linearVelocityY = -5f;
 
         soundManager.SelectClip(2, 1f);
         panelCountdown.SetActive(false);
         rb.AddForce(Vector2.up * firstJump, ForceMode2D.Impulse);
-        floor.bodyType = RigidbodyType2D.Dynamic; rbEdificio2.bodyType = RigidbodyType2D.Dynamic; rbNiebla.bodyType = RigidbodyType2D.Dynamic;
+        Invoke("FloorGravity", .05f);
         animatorNiebla.enabled = false; boxCollider2D.enabled = false; buttonRight.SetActive(true); buttonLeft.SetActive(true);
-        Invoke("DesactiveFloor", 2);
+        Invoke("DesactiveFloor", .75f);
+    }
+
+    void FloorGravity()
+    {
+        floor.bodyType = RigidbodyType2D.Dynamic; rbEdificio2.bodyType = RigidbodyType2D.Dynamic; rbNiebla.bodyType = RigidbodyType2D.Dynamic;
     }
 
     void DesactiveFloor()

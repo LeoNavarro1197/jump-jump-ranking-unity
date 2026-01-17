@@ -49,6 +49,7 @@ public class NoInternet : MonoBehaviour
                 if (!isThereInternet)
                 {
                     isThereInternet = true;
+                    leaderboardManager.spinner.SetActive(true);
                     // [MODIFICADO] Solo inicializamos una vez los eventos pesados
                     if (!initialized)
                     {

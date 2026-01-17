@@ -30,16 +30,20 @@ public class FinalScore : MonoBehaviour
             scoreInt = scoreInt + 1;
 
             scoreText.text = scoreInt.ToString();
-            scoreText.fontSize = 90;
+            scoreText.fontSize = 170;
             soundManager.SelectClip(4, 1f);
             Invoke("ResetSizeText", .1f);
 
             int highscoreLocal = PlayerPrefs.GetInt("CurrentScore", 0);
 
-            if (scoreInt > highscoreLocal)
+            if (scoreInt == highscoreLocal)
             {
                 soundManager.SelectClip(8, 1f);
-                profileUserscoreTxt.fontSize = 21;
+            }
+
+            if (scoreInt > highscoreLocal)
+            {
+                profileUserscoreTxt.fontSize = 50;
                 PlayerPrefs.SetInt("CurrentScore", scoreInt);
                 PlayerPrefs.Save();
                 profileUserscoreTxt.text = scoreInt.ToString();
@@ -79,8 +83,8 @@ public class FinalScore : MonoBehaviour
 
     void ResetSizeText()
     {
-        scoreText.fontSize = 60;
-        profileUserscoreTxt.fontSize = 20;
+        scoreText.fontSize = 120;
+        profileUserscoreTxt.fontSize = 45;
     }
 
     void onApplicationChange()
@@ -91,7 +95,7 @@ public class FinalScore : MonoBehaviour
         changeColor.hasStartedLerpBackgroundBlackHole = false;
         changeColor.hasStartedLerpBackgroundNormal = false;
         scoreText.fontSize = 100;
-        soundManager.SelectClip(5, 1.5f);
+        soundManager.SelectClip(5, 3.5f);
         Invoke("ResetSizeText", .1f);
     }
 }
