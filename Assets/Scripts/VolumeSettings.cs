@@ -11,7 +11,7 @@ public class VolumeSettings : MonoBehaviour
     PlayerControl playerControl;
     PlayerDestruction playerDestruction;
 
-    [SerializeField] AudioSource clipMusicSlow, clipMusicUp, clipMusicUpBypass;
+    [SerializeField] public AudioSource clipMusicSlow, clipMusicUp, clipMusicUpBypass;
 
     bool flagPlayMusic = true, flagPlayMusicTime = true;
 

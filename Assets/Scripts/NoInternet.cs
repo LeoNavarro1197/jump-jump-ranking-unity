@@ -26,6 +26,9 @@ public class NoInternet : MonoBehaviour
             {
                 Debug.Log("No hay internet");
                 isThereInternet = false;
+                leaderboardManager.rankTxt.gameObject.SetActive(false);
+                leaderboardManager.textRankTxt.gameObject.SetActive(false);
+                leaderboardManager.noInternetTxt.gameObject.SetActive(true);
 
                 int score = PlayerPrefs.GetInt("CurrentScore", 0);
                 string username = PlayerPrefs.GetString("Username");
@@ -45,6 +48,9 @@ public class NoInternet : MonoBehaviour
             else
             {
                 Debug.Log("Internet disponible");
+                leaderboardManager.rankTxt.gameObject.SetActive(true);
+                leaderboardManager.textRankTxt.gameObject.SetActive(true);
+                leaderboardManager.noInternetTxt.gameObject.SetActive(false);
 
                 if (!isThereInternet)
                 {

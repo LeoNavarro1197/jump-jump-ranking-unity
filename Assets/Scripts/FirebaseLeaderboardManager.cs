@@ -10,12 +10,14 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 {
     public GameObject loadPanel, soundManagerObject, usernamePanel, userprofilePanel, leaderboardPanel, optionsPanel, bloqueadorPanel, startPanel, spinner, 
         leadreboardContent, noInternetPanel, userDataPrefab, buttonLeft, buttonRight, buttonReload;
-    public TMP_Text profileUsernameTxt, profileUserscoreTxt, errorUsernameTxt, rankTxt;
+    public TMP_Text profileUsernameTxt, profileUserscoreTxt, errorUsernameTxt, rankTxt, textRankTxt, noInternetTxt;
     public TMP_InputField usernameInput;
 
     public int score, totalUsers = 0;
     public string username = "";
 
+    PlayerControl playerControl;
+    VolumeSettings volumeSettings;
     public FinalScore finalScore;
     public TMP_Text scoreTextInGame;
     NoInternet noInternet;
@@ -30,6 +32,8 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 
         soundManager = FindFirstObjectByType<SoundManager>();
         noInternet = FindFirstObjectByType<NoInternet>();
+        playerControl = FindFirstObjectByType<PlayerControl>();
+        volumeSettings = FindFirstObjectByType<VolumeSettings>();
 
         Invoke("LoadingSession", 2f);
     }
@@ -37,7 +41,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
     void LoadingSession()
     {
         //loadPanel.SetActive(false);
-        soundManagerObject.SetActive(true);
+        //soundManagerObject.SetActive(true);
 
         noInternet.StartCheckInternet();
 
@@ -56,10 +60,19 @@ public class FirebaseLeaderboardManager : MonoBehaviour
     {
         userprofilePanel.SetActive(true);
         noInternetPanel.SetActive(false);
+
+        soundManager.SelectClip(3, 1f);
     }
 
     public void ShowLeaderboard()
     {
+        if (playerControl.START)
+        {
+            Time.timeScale = 0f;
+            volumeSettings.clipMusicUp.mute = true;
+            volumeSettings.clipMusicUpBypass.mute = false;
+        }
+        
         soundManager.SelectClip(6, .5f);
 
         buttonLeft.SetActive(false);
@@ -91,6 +104,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 
     public void CloseLeaderboard()
     {
+        Time.timeScale = 1f;
         soundManager.SelectClip(7, .5f);
 
         if (leadreboardContent.transform.childCount > 0)
@@ -104,7 +118,19 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         leaderboardPanel.SetActive(false);
         userprofilePanel.SetActive(true);
         startPanel.SetActive(false);
-        buttonReload.SetActive(true);
+
+        if (!playerControl.START)
+        {
+            buttonReload.SetActive(true);
+        }
+        else
+        {
+            volumeSettings.clipMusicUp.mute = false;
+            volumeSettings.clipMusicUpBypass.mute = true;
+        }
+
+            buttonLeft.SetActive(true);
+        buttonRight.SetActive(true);
     }
 
     public void OpenOptions()

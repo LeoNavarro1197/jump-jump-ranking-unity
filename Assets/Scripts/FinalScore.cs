@@ -38,7 +38,7 @@ public class FinalScore : MonoBehaviour
 
             if (scoreInt == highscoreLocal)
             {
-                soundManager.SelectClip(8, 1f);
+                soundManager.SelectClip(8, 2.5f);
             }
 
             if (scoreInt > highscoreLocal)
@@ -89,11 +89,7 @@ public class FinalScore : MonoBehaviour
 
     void onApplicationChange()
     {
-        changeColor.hasStartedLerpBackgroundRed = false;
-        changeColor.hasStartedLerpBackgroundBlue = false;
-        changeColor.hasStartedLerpBackgroundYellow = false;
-        changeColor.hasStartedLerpBackgroundBlackHole = false;
-        changeColor.hasStartedLerpBackgroundNormal = false;
+        changeColor.hasStartedLerpBackgroundRed = false; changeColor.hasStartedLerpBackgroundBlue = false; changeColor.hasStartedLerpBackgroundYellow = false; changeColor.hasStartedLerpBackgroundBlackHole = false; changeColor.hasStartedLerpBackgroundNormal = false;
         scoreText.fontSize = 100;
         soundManager.SelectClip(5, 3.5f);
         Invoke("ResetSizeText", .1f);

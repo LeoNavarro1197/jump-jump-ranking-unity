@@ -16,7 +16,8 @@ public class PlayerControl : MonoBehaviour
 
     public float moveDirection = 0f;
     private Rigidbody2D rb;
-    private BoxCollider2D boxCollider2D;
+    //private BoxCollider2D boxCollider2D;
+    private CapsuleCollider2D boxCollider2D;
 
     public int countdown;
     public TMP_Text countdownText;
@@ -37,7 +38,7 @@ public class PlayerControl : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        boxCollider2D = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
         soundManager = FindFirstObjectByType<SoundManager>();
     }
@@ -144,10 +145,10 @@ public class PlayerControl : MonoBehaviour
     {
         if(collision.transform.tag == "Car" && canJump)
         {
+            soundManager.SelectClip(1, 1f);
             animator.SetBool("isGround", true);
             Invoke("isGroundFalse", .1f);
             Jump();
-            soundManager.SelectClip(1, 1f);
         }
 
         if(collision.transform.tag == "Car")
