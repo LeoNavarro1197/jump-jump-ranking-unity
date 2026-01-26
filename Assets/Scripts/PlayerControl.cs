@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour
     public SoundManager soundManager;
     public ButtonReload buttonReload;
     public PlayerDestruction playerDestruction;
+    Tutorial tutorial;
 
     public float horizontalSpeed = 5f;
     public float airControl = 0.1f;
@@ -41,6 +42,7 @@ public class PlayerControl : MonoBehaviour
         boxCollider2D = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
         soundManager = FindFirstObjectByType<SoundManager>();
+        tutorial = FindFirstObjectByType<Tutorial>();
     }
 
     void FixedUpdate()
@@ -118,9 +120,10 @@ public class PlayerControl : MonoBehaviour
 
         START = true;
 
-        // Reposicionar los puntos de respawn
-        //leftRespawn.linearVelocityY = -5f;
-        //rightRespawn.linearVelocityY = -5f;
+        if (PlayerPrefs.GetString("TutorialOneCompleted") == "")
+        {
+            StartCoroutine(tutorial.StartTutorial());
+        }
 
         soundManager.SelectClip(2, 1f);
         panelCountdown.SetActive(false);

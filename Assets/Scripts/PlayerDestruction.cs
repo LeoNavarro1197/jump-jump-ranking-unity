@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerDestruction : MonoBehaviour
@@ -14,7 +15,8 @@ public class PlayerDestruction : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
     public PlayerControl playerControl;
-    private FinalScore finalScore;
+    Tutorial tutorial;
+
     public Animator animationCamera;
 
     SoundManager soundManager;
@@ -22,14 +24,14 @@ public class PlayerDestruction : MonoBehaviour
     void Start()
     {
         soundManager = FindFirstObjectByType<SoundManager>();
-        finalScore = FindFirstObjectByType<FinalScore>();
+        tutorial = FindFirstObjectByType<Tutorial>();
     }
 
     public void DestroyPlayer()
     {
         if (spriteRenderer == null || spriteRenderer.sprite == null)
         {
-            Debug.LogError("No se encontró un SpriteRenderer o el sprite es nulo.");
+            // No hay sprite asignado, no se puede fragmentar
             return;
         }
 
@@ -77,18 +79,21 @@ public class PlayerDestruction : MonoBehaviour
     {
         if(collision.gameObject.name == "Death" || collision.gameObject.name == "DeathLeft" || collision.gameObject.name == "DeathRigth")
         {
-            buttonLeft.SetActive(false); buttonRight.SetActive(false); buttonReload.SetActive(true);
-            Instantiate(explosion, playerControl.transform.position, Quaternion.identity);
-            soundManager.SelectClip(0, 1f);
-            DestroyPlayer();
-            animationCamera.CrossFadeInFixedTime("camara", 0f);
-
-            // Reposicionar los puntos de respawn
-            //leftRespawn.linearVelocityY = 5f;
-            //rightRespawn.linearVelocityY = 5f;
-
-            DEATH = true;
-            playerControl.START = false;
+            StartCoroutine(StartDead());
         }
+    }
+
+    IEnumerator StartDead()
+    {
+        yield return StartCoroutine(tutorial.StartTutorialTwo());
+
+        buttonLeft.SetActive(false); buttonRight.SetActive(false); buttonReload.SetActive(true);
+        Instantiate(explosion, playerControl.transform.position, Quaternion.identity);
+        soundManager.SelectClip(0, 1f);
+        DestroyPlayer();
+        animationCamera.CrossFadeInFixedTime("camara", 0f);
+
+        DEATH = true;
+        playerControl.START = false;
     }
 }

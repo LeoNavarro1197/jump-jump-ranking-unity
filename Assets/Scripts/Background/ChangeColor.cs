@@ -56,7 +56,7 @@ public class ChangeColor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (finalscore.scoreInt == 5)
+        if (finalscore.scoreInt == finalscore.red)
         {
             if (finalscore.isBackgroundRed && !hasStartedLerpBackgroundRed)
             {
@@ -80,7 +80,7 @@ public class ChangeColor : MonoBehaviour
                 }
             }
         }
-        else if (finalscore.scoreInt == 10)
+        else if (finalscore.scoreInt == finalscore.blue)
         {
             if (finalscore.isBackgroundBlue && !hasStartedLerpBackgroundBlue)
             {
@@ -104,7 +104,7 @@ public class ChangeColor : MonoBehaviour
                 }
             }
         }
-        else if (finalscore.scoreInt == 15)
+        else if (finalscore.scoreInt == finalscore.yellow)
         {
             if (finalscore.isBackgroundYellow && !hasStartedLerpBackgroundYellow)
             {
@@ -128,7 +128,7 @@ public class ChangeColor : MonoBehaviour
                 }
             }
         }
-        else if (finalscore.scoreInt == 20)
+        else if (finalscore.scoreInt == finalscore.black)
         {
             if (finalscore.isBackgroundBlackHole && !hasStartedLerpBackgroundBlackHole)
             {
@@ -158,7 +158,7 @@ public class ChangeColor : MonoBehaviour
                 }
             }
         }
-        else if (finalscore.scoreInt == 25)
+        else if (finalscore.scoreInt == finalscore.normal)
         {
             if (finalscore.isBackgroundNormal && !hasStartedLerpBackgroundNormal)
             {

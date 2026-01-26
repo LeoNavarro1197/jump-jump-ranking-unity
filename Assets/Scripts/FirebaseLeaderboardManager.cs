@@ -2,13 +2,12 @@ using Firebase.Database;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 
 public class FirebaseLeaderboardManager : MonoBehaviour
 {
-    public GameObject loadPanel, soundManagerObject, usernamePanel, userprofilePanel, leaderboardPanel, optionsPanel, bloqueadorPanel, startPanel, spinner, 
+    public GameObject player, loadPanel, soundManagerObject, usernamePanel, userprofilePanel, leaderboardPanel, optionsPanel, bloqueadorPanel, startPanel, spinner, 
         leadreboardContent, noInternetPanel, userDataPrefab, buttonLeft, buttonRight, buttonReload;
     public TMP_Text profileUsernameTxt, profileUserscoreTxt, errorUsernameTxt, rankTxt, textRankTxt, noInternetTxt;
     public TMP_InputField usernameInput;
@@ -75,8 +74,8 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         
         soundManager.SelectClip(6, .5f);
 
-        buttonLeft.SetActive(false);
-        buttonRight.SetActive(false);
+        //buttonLeft.SetActive(false);
+        //buttonRight.SetActive(false);
 
         if (noInternet.isThereInternet)
         {
@@ -94,7 +93,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 
         if (!noInternet.isThereInternet)
         {
-            errorUsernameTxt.text = "You are not connected to the internet";
+            errorUsernameTxt.text = "Check your internet connection.";
         }
         else
         {
@@ -128,9 +127,6 @@ public class FirebaseLeaderboardManager : MonoBehaviour
             volumeSettings.clipMusicUp.mute = false;
             volumeSettings.clipMusicUpBypass.mute = true;
         }
-
-            buttonLeft.SetActive(true);
-        buttonRight.SetActive(true);
     }
 
     public void OpenOptions()
@@ -170,11 +166,11 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         db.ChildAdded += HandleChildAdded;
         GetTotalUsers();
 
-        int playerID = PlayerPrefs.GetInt("PlayerID", -1); // [MODIFICADO] Default a -1 para evitar conflictos con User_0
+        int playerID = PlayerPrefs.GetInt("PlayerID", -1); // Default a -1 para evitar conflictos con User_0
         if (playerID != -1)
         {
             db.Child("User_" + playerID.ToString()).Child("score").ValueChanged += HandleScoreChanged;
-            StartCoroutine(FetchUserProfileData(playerID)); // [NUEVO] Mover aquí para asegurar orden
+            StartCoroutine(FetchUserProfileData(playerID)); // Mover aquí para asegurar orden
         }
 
         SyncOfflineScore();
@@ -226,7 +222,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         {
             int cloudScore = int.Parse(args.Snapshot.Value.ToString());
 
-            // [MODIFICADO] Solo actualizamos si la nube es mayor al récord local guardado
+            // Solo actualizamos si la nube es mayor al récord local guardado
             if (cloudScore > PlayerPrefs.GetInt("CurrentScore", 0))
             {
                 score = cloudScore;
@@ -295,7 +291,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         db.ValueChanged += (object sender2, ValueChangedEventArgs e2) =>
         {
             if (e2.DatabaseError != null) return;
-            totalUsers = (int)e2.Snapshot.ChildrenCount; // [MODIFICADO] Casteo directo
+            totalUsers = (int)e2.Snapshot.ChildrenCount; // Casteo directo
         };
     }
 
@@ -308,32 +304,40 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         {
             DataSnapshot snapshot = task.Result;
 
-            string input = usernameInput.text;
-            if (snapshot != null && snapshot.HasChildren)
+            if (!noInternet.isThereInternet)
             {
-                errorUsernameTxt.text = "This username already exists";
-            }
-            else if(usernameInput.text.Length > 13 || usernameInput.text.Length < 3)
-            {
-                errorUsernameTxt.text = "Your username must be between 3 and 13 characters";
-            }
-            else if(!Regex.IsMatch(input, "^[a-zA-Z0-9_]*$"))
-            {
-                errorUsernameTxt.text = "Only letters, numbers and underscore (_) allowed";
+                //Check your internet connection.
+                //errorUsernameTxt.text = "Check your internet connection.";
             }
             else
             {
-                errorUsernameTxt.text = "";
-                int targetID = totalUsers; // [MODIFICADO] Guardar ID actual
-                PushUserData(targetID);
-                PlayerPrefs.SetInt("PlayerID", targetID);
-                PlayerPrefs.SetString("Username", usernameInput.text);
-                PlayerPrefs.SetInt("CurrentScore", 0);
+                string input = usernameInput.text;
+                if (snapshot != null && snapshot.HasChildren)
+                {
+                    errorUsernameTxt.text = "This username already exists";
+                }
+                else if (usernameInput.text.Length > 13 || usernameInput.text.Length < 3)
+                {
+                    errorUsernameTxt.text = "Your username must be between 3 and 13 characters";
+                }
+                else if (!Regex.IsMatch(input, "^[a-zA-Z0-9_]*$"))
+                {
+                    errorUsernameTxt.text = "Only letters, numbers and underscore (_) allowed";
+                }
+                else
+                {
+                    errorUsernameTxt.text = "";
+                    int targetID = totalUsers; // Guardar ID actual
+                    PushUserData(targetID);
+                    PlayerPrefs.SetInt("PlayerID", targetID);
+                    PlayerPrefs.SetString("Username", usernameInput.text);
+                    PlayerPrefs.SetInt("CurrentScore", 0);
 
-                usernamePanel.SetActive(false);
-                spinner.SetActive(true);
+                    usernamePanel.SetActive(false);
+                    spinner.SetActive(true);
 
-                StartCoroutine(delayFetchProfile(targetID));
+                    StartCoroutine(delayFetchProfile(targetID));
+                }
             }
         }
     }
@@ -353,7 +357,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 
     IEnumerator FetchUserProfileData(int playerID)
     {
-        // [MODIFICADO] Ya no restamos 1 para evitar errores. Usamos el ID directo.
+        // Ya no resto 1 para evitar errores. Usamos el ID directo.
         if (playerID != -1)
         {
             var task = db.Child("User_" + playerID.ToString()).GetValueAsync();
@@ -369,7 +373,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
                     int cloudScore = int.Parse(snapshot.Child("score").Value.ToString());
                     int localScore = PlayerPrefs.GetInt("CurrentScore", 0);
 
-                    // [NUEVO CODIGO] PRIORIDAD LOCAL:
+                    // PRIORIDAD LOCAL:
                     if (localScore > cloudScore)
                     {
                         score = localScore;
@@ -386,8 +390,8 @@ public class FirebaseLeaderboardManager : MonoBehaviour
                     profileUsernameTxt.text = username;
                     profileUserscoreTxt.text = "" + score;
                     userprofilePanel.SetActive(true);
-                    buttonLeft.SetActive(false);
-                    buttonRight.SetActive(false);
+                    //buttonLeft.SetActive(false);
+                    //buttonRight.SetActive(false);
                     usernamePanel.SetActive(false);
                     noInternetPanel.SetActive(false);
                 }
@@ -397,7 +401,7 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 
     IEnumerator FetchLeaderBoardData()
     {
-        var task = db.OrderByChild("score").LimitToLast(100).GetValueAsync();
+        var task = db.OrderByChild("score").LimitToLast(totalUsers).GetValueAsync();
         yield return new WaitUntil(() => task.IsCompleted);
 
         if (task.IsCompleted && !task.IsFaulted)
@@ -421,13 +425,17 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         for (int i = leaderboardData.Count - 1; i >= 0; i--)
         {
             rankCount = rankCount + 1;
-            GameObject obj = Instantiate(userDataPrefab);
-            obj.transform.parent = leadreboardContent.transform;
-            obj.transform.localScale = Vector3.one;
+            if (rankCount <= 100)
+            {
+                GameObject obj = Instantiate(userDataPrefab);
+                obj.transform.parent = leadreboardContent.transform;
+                obj.transform.localScale = Vector3.one;
 
-            obj.GetComponent<UserDataUI>().userRankTxt.text = "Rank " + rankCount;
-            obj.GetComponent<UserDataUI>().usernameTxt.text = "" + leaderboardData[i].username;
-            obj.GetComponent<UserDataUI>().userScoreTxt.text = "" + leaderboardData[i].score;
+                obj.GetComponent<UserDataUI>().userRankTxt.text = "Rank " + rankCount;
+                obj.GetComponent<UserDataUI>().usernameTxt.text = "" + leaderboardData[i].username;
+                obj.GetComponent<UserDataUI>().userScoreTxt.text = "" + leaderboardData[i].score;
+            }
+            
 
             if (leaderboardData[i].username == PlayerPrefs.GetString("Username"))
             {
@@ -436,8 +444,8 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         }
         leaderboardPanel.SetActive(true);
         userprofilePanel.SetActive(false);
-        buttonLeft.SetActive(false);
-        buttonRight.SetActive(false);
+        //buttonLeft.SetActive(false);
+        //buttonRight.SetActive(false);
     }
 }
 

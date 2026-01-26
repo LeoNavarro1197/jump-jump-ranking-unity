@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class FinalScore : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class FinalScore : MonoBehaviour
 
     public bool isBackgroundRed = false, isBackgroundBlue = false, isBackgroundYellow = false, isBackgroundBlackHole = false, isBackgroundNormal = false;
 
+    public int red = 5, blue = 10, yellow = 15, black = 20, normal = 25;
+
     private void Start()
     {
         soundManager = FindFirstObjectByType<SoundManager>();
@@ -23,7 +26,7 @@ public class FinalScore : MonoBehaviour
         noInternet = FindFirstObjectByType<NoInternet>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (playerControl.POINT)
         {
@@ -56,23 +59,23 @@ public class FinalScore : MonoBehaviour
 
             switch (scoreInt)
             {
-                case 5:
+                case int s when s == red:
                     onApplicationChange();
                     isBackgroundRed = true;
                     break;
-                case 10:
+                case int s when s == blue:
                     onApplicationChange();
                     isBackgroundBlue = true;
                     break;
-                case 15:
+                case int s when s == yellow:
                     onApplicationChange();
                     isBackgroundYellow = true;
                     break;
-                case 20:
+                case int s when s == black:
                     onApplicationChange();
                     isBackgroundBlackHole = true;
                     break;
-                case 25:
+                case int s when s == normal:
                     onApplicationChange();
                     isBackgroundNormal = true;
                     break;

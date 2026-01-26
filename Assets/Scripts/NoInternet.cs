@@ -7,7 +7,7 @@ public class NoInternet : MonoBehaviour
 {
     FirebaseLeaderboardManager leaderboardManager;
     public bool isThereInternet = false;
-    private bool initialized = false; // [NUEVO] Para evitar doble suscripción a eventos
+    private bool initialized = false; // Para evitar doble suscripción a eventos
 
     void Start()
     {
@@ -25,6 +25,13 @@ public class NoInternet : MonoBehaviour
             if (request.result != UnityWebRequest.Result.Success)
             {
                 Debug.Log("No hay internet");
+                if (PlayerPrefs.GetString("Username") == "")
+                {
+                    isThereInternet = false;
+                    yield return new WaitForSeconds(1f);
+                    continue; // Si no hay username, no hacemos nada
+                }
+                
                 isThereInternet = false;
                 leaderboardManager.rankTxt.gameObject.SetActive(false);
                 leaderboardManager.textRankTxt.gameObject.SetActive(false);
@@ -55,10 +62,10 @@ public class NoInternet : MonoBehaviour
                 if (!isThereInternet)
                 {
                     isThereInternet = true;
-                    leaderboardManager.spinner.SetActive(true);
-                    // [MODIFICADO] Solo inicializamos una vez los eventos pesados
+                    // Solo inicializamos una vez los eventos pesados
                     if (!initialized)
                     {
+                        leaderboardManager.spinner.SetActive(true);
                         leaderboardManager.FirebaseInicialize();
                         leaderboardManager.ListenForScoreUpdates();
                         initialized = true;
@@ -70,7 +77,7 @@ public class NoInternet : MonoBehaviour
                     }
                 }
             }
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(5f);
         }
     }
 
