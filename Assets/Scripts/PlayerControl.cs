@@ -54,7 +54,7 @@ public class PlayerControl : MonoBehaviour
         }
         else
         {
-            // Si no se presiona nada, reducimos la velocidad suavemente
+            // Si no se presiona nada, la velocidad se reduce suavemente
             rb.linearVelocity = new Vector3(rb.linearVelocity.x * (1 - airControl), rb.linearVelocity.y, 0);
         }
 
@@ -164,20 +164,26 @@ public class PlayerControl : MonoBehaviour
         if (collision.transform.tag == "Car")
         {
             canJump = true;
-            POINT = false;
+            StartCoroutine(PointFalse());
         }
     }
 
     void Jump()
     {
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f); // Reinicia la velocidad en Y para evitar acumulación
-        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse); // Fuerza de salto
-        canJump = false; // Desactiva el salto hasta que realmente haya aterrizado
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f); // Reiniciar la velocidad en Y para evitar acumulación
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        canJump = false;
     }
 
     void isGroundFalse()
     {
         animator.SetBool("isGround", false);
         animator.SetBool("isJump", true);
+    }
+
+    IEnumerator PointFalse()
+    {
+        yield return new WaitForSeconds(.05f);
+        POINT = false;
     }
 }

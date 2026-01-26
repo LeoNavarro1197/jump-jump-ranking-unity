@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class FirebaseLeaderboardManager : MonoBehaviour
 {
-    public GameObject player, loadPanel, soundManagerObject, usernamePanel, userprofilePanel, leaderboardPanel, optionsPanel, bloqueadorPanel, startPanel, spinner, 
+    public GameObject player, loadPanel, soundManagerObject, usernamePanel, userprofilePanel, leaderboardPanel, optionsPanel, creditsPanel, bloqueadorPanel, startPanel, spinner, 
         leadreboardContent, noInternetPanel, userDataPrefab, buttonLeft, buttonRight, buttonReload;
     public TMP_Text profileUsernameTxt, profileUserscoreTxt, errorUsernameTxt, rankTxt, textRankTxt, noInternetTxt;
     public TMP_InputField usernameInput;
@@ -136,10 +136,18 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         bloqueadorPanel.SetActive(true);
     }
 
+    public void OpenCredits()
+    {
+        soundManager.SelectClip(6, .5f);
+        creditsPanel.SetActive(true);
+        bloqueadorPanel.SetActive(true);
+    }
+
     public void CloseOptions()
     {
         soundManager.SelectClip(7, .5f);
         optionsPanel.SetActive(false);
+        creditsPanel.SetActive(false);
         bloqueadorPanel.SetActive(false);
     }
 
