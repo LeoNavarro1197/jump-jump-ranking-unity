@@ -95,5 +95,6 @@ public class PlayerDestruction : MonoBehaviour
 
         DEATH = true;
         playerControl.START = false;
+        playerControl.STARTCOROUTINEPC = true;
     }
 }

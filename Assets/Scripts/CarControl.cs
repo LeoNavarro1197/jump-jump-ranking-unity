@@ -20,6 +20,11 @@ public class CarControl : MonoBehaviour
 
     private void Awake()
     {
+        
+    }
+
+    private void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
 
         GameObject nombrePlayer = GameObject.Find("Player");

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FirebaseLeaderboardManager : MonoBehaviour
@@ -39,9 +40,6 @@ public class FirebaseLeaderboardManager : MonoBehaviour
 
     void LoadingSession()
     {
-        //loadPanel.SetActive(false);
-        //soundManagerObject.SetActive(true);
-
         noInternet.StartCheckInternet();
 
         if (PlayerPrefs.GetString("Username") != "")
@@ -74,9 +72,6 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         
         soundManager.SelectClip(6, .5f);
 
-        //buttonLeft.SetActive(false);
-        //buttonRight.SetActive(false);
-
         if (noInternet.isThereInternet)
         {
             StartCoroutine(FetchLeaderBoardData());
@@ -84,20 +79,6 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         else if (!noInternet.isThereInternet)
         {
             leaderboardPanel.SetActive(true);
-        }
-    }
-
-    public void SignInWithUsername()
-    {
-        soundManager.SelectClip(3, 1f);
-
-        if (!noInternet.isThereInternet)
-        {
-            errorUsernameTxt.text = "Check your internet connection.";
-        }
-        else
-        {
-            StartCoroutine(CheckUserExistInDatabase());
         }
     }
 
@@ -126,6 +107,37 @@ public class FirebaseLeaderboardManager : MonoBehaviour
         {
             volumeSettings.clipMusicUp.mute = false;
             volumeSettings.clipMusicUpBypass.mute = true;
+        }
+    }
+
+#if UNITY_STANDALONE
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!leaderboardPanel.activeSelf)
+            {
+                ShowLeaderboard();
+            }
+            else if (leaderboardPanel.activeSelf)
+            {
+                CloseLeaderboard();
+            }
+        }
+    }
+ #endif
+
+    public void SignInWithUsername()
+    {
+        soundManager.SelectClip(3, 1f);
+
+        if (!noInternet.isThereInternet)
+        {
+            errorUsernameTxt.text = "Check your internet connection.";
+        }
+        else
+        {
+            StartCoroutine(CheckUserExistInDatabase());
         }
     }
 

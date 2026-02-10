@@ -1,9 +1,11 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 
 public class PlayerControl : MonoBehaviour
 {
+    FirebaseLeaderboardManager firebaseLeaderboardManager;
     public CarPool carPool;
     public CarMovementControl carMovementControl;
     public SoundManager soundManager;
@@ -31,6 +33,8 @@ public class PlayerControl : MonoBehaviour
     public bool POINT = false;
     private bool canJump = true;
 
+    public bool STARTCOROUTINEPC = true;
+
     private Animator animator;
 
     public bool isMusicSlow = false;
@@ -43,6 +47,7 @@ public class PlayerControl : MonoBehaviour
         animator = GetComponent<Animator>();
         soundManager = FindFirstObjectByType<SoundManager>();
         tutorial = FindFirstObjectByType<Tutorial>();
+        firebaseLeaderboardManager = FindFirstObjectByType<FirebaseLeaderboardManager>();
     }
 
     void FixedUpdate()
@@ -83,12 +88,56 @@ public class PlayerControl : MonoBehaviour
                 boxCollider2D.enabled = true;
             }
         }
+#if UNITY_STANDALONE
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (!firebaseLeaderboardManager.leaderboardPanel.activeSelf && !buttonReload.gameObject.activeSelf)
+            {
+                if (STARTCOROUTINEPC)
+                {
+                    STARTCOROUTINEPC = false;
+                    Debug.Log("Iniciar Coroutine desde PC");
+                    CoroutineStart();
+                    soundManager.SelectClip(3, 1f);
+                }
+            }
+        }
+#endif
     }
 
     // Cambiar la dirección del player
-    public void MoveLeft() { moveDirection = -1; transform.rotation = Quaternion.Euler(0, 0, 0); }
-    public void MoveRight() { moveDirection = 1; transform.rotation = Quaternion.Euler(0, 180, 0); }
-    public void StopMoving() { moveDirection = 0; }
+    void MoveLeft() { moveDirection = -1; transform.rotation = Quaternion.Euler(0, 0, 0); }
+    void MoveRight() { moveDirection = 1; transform.rotation = Quaternion.Euler(0, 180, 0); }
+    void StopMoving() { moveDirection = 0; }
+
+#if UNITY_STANDALONE
+    private void Update()
+    {
+        buttonLeft.SetActive(false); buttonRight.SetActive(false);
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            MoveLeft();
+        }
+        else if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            StopMoving();
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            MoveRight();
+        }
+        else if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            StopMoving();
+        }
+    }
+#elif UNITY_ANDROID || UNITY_IOS
+    public void MoveLeftMobile() { MoveLeft(); }
+    public void MoveRightMobile() { MoveRight(); }
+    public void StopMovingMobile() { StopMoving(); }
+#endif
 
     // Boton Start en la UI
     public void CoroutineStart()
@@ -118,6 +167,7 @@ public class PlayerControl : MonoBehaviour
         countdownText.text = "¡GO!";
         yield return new WaitForSeconds(.5f);
 
+        STARTCOROUTINEPC = false;
         START = true;
 
         if (PlayerPrefs.GetString("TutorialOneCompleted") == "")

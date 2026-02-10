@@ -1,10 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Tutorial : MonoBehaviour
 {
     public GameObject tutorialOnePanel, tutorialTwoPanel, player;
-    public GameObject buttonLeft, buttonRight;
+    public GameObject buttonLeft, buttonRight, leftArrow, rightArrow, marcoButtonLeft, marcoButtonRight;
+
+    public TextMeshProUGUI pressContinueTxt, buttonLeftTxt, buttonRightTxt, pressContinueTxt2;
 
     public AudioSource UP, UPB;
 
@@ -13,12 +16,12 @@ public class Tutorial : MonoBehaviour
     {
         //PlayerPrefs.DeleteKey("TutorialOneCompleted");
         //PlayerPrefs.DeleteKey("TutorialTwoCompleted");
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+#if UNITY_STANDALONE
+    PCAplication();
+#elif UNITY_ANDROID || UNITY_IOS
+    AndroidAplication();
+#endif
     }
 
     public IEnumerator StartTutorial()
@@ -57,6 +60,11 @@ public class Tutorial : MonoBehaviour
         UP.mute = false; UPB.mute = true;
         tutorialOnePanel.SetActive(false);
         buttonLeft.SetActive(true); buttonRight.SetActive(true);
+#if UNITY_STANDALONE
+        leftArrow.SetActive(false); rightArrow.SetActive(false);
+#elif UNITY_ANDROID || UNITY_IOS
+        marcoButtonLeft.SetActive(false); marcoButtonRight.SetActive(false);
+#endif
     }
 
     void ViewTutorialTwo()
@@ -75,5 +83,23 @@ public class Tutorial : MonoBehaviour
         UP.mute = false; UPB.mute = true;
         tutorialTwoPanel.SetActive(false);
         buttonLeft.SetActive(true); buttonRight.SetActive(true);
+    }
+
+    void AndroidAplication()
+    {
+        buttonLeftTxt.text = "Tap Button Left";
+        buttonRightTxt.text = "Tap Button Right";
+        pressContinueTxt.text = "Tap To Continue";
+        pressContinueTxt.text = "Tap To Continue";
+        marcoButtonLeft.SetActive(true); marcoButtonRight.SetActive(true);
+    }
+
+    void PCAplication()
+    {
+        buttonLeftTxt.text = "Left Arrow";
+        buttonRightTxt.text = "Right Arrow";
+        pressContinueTxt.text = "Press Space To Continue";
+        pressContinueTxt2.text = "Press Space To Continue";
+        leftArrow.SetActive(true); rightArrow.SetActive(true);
     }
 }

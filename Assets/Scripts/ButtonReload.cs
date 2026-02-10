@@ -16,6 +16,8 @@ public class ButtonReload : MonoBehaviour
     [SerializeField] SpriteRenderer[] sprites;
     [SerializeField] public SpriteRenderer spritePlayerDestruction, spritePlayer;
 
+    bool bandera = true;
+
     public void ButtonReloaded()
     {
         player.SetActive(true);
@@ -28,9 +30,6 @@ public class ButtonReload : MonoBehaviour
         finalScore.scoreText.text = "0";
 
         playerControl.moveDirection = 0;
-
-        //buttonLeft.SetActive(true);
-        //buttonRight.SetActive(true);
 
         playerControl.CoroutineStart();
         playerDestruction.DEATH = false;
@@ -61,4 +60,20 @@ public class ButtonReload : MonoBehaviour
             carPool.carListSprite[i].color = Color.white;
         }
     }
+
+#if UNITY_STANDALONE
+    void FixedUpdate()
+    {
+        if (playerDestruction.DEATH)
+        {
+            bandera = true;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && playerDestruction.DEATH == true && bandera)
+        {
+            bandera = false;
+            ButtonReloaded();
+        }
+    }
+#endif
 }
