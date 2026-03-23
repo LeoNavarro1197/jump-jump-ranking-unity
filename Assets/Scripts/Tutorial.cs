@@ -6,6 +6,7 @@ public class Tutorial : MonoBehaviour
 {
     public GameObject tutorialOnePanel, tutorialTwoPanel, player;
     public GameObject buttonLeft, buttonRight, leftArrow, rightArrow, marcoButtonLeft, marcoButtonRight;
+    public GameObject panelTutorial1, panelTutorial2;
 
     public TextMeshProUGUI pressContinueTxt, buttonLeftTxt, buttonRightTxt, pressContinueTxt2;
 
@@ -18,10 +19,29 @@ public class Tutorial : MonoBehaviour
         //PlayerPrefs.DeleteKey("TutorialTwoCompleted");
 
 #if UNITY_STANDALONE
-    PCAplication();
+        PCAplication();
 #elif UNITY_ANDROID || UNITY_IOS
     AndroidAplication();
 #endif
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space) && panelTutorial1.activeSelf)
+        {
+            panelTutorial1.SetActive(false);
+            Time.timeScale = 1f;
+            UP.mute = false; UPB.mute = true;
+            tutorialTwoPanel.SetActive(false);
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space) && panelTutorial2.activeSelf)
+        {
+            panelTutorial2.SetActive(false);
+            Time.timeScale = 1f;
+            UP.mute = false; UPB.mute = true;
+            tutorialTwoPanel.SetActive(false);
+        }
     }
 
     public IEnumerator StartTutorial()

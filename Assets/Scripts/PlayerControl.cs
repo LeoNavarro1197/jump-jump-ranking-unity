@@ -91,15 +91,12 @@ public class PlayerControl : MonoBehaviour
 #if UNITY_STANDALONE
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!firebaseLeaderboardManager.leaderboardPanel.activeSelf && !buttonReload.gameObject.activeSelf)
+            if (STARTCOROUTINEPC)
             {
-                if (STARTCOROUTINEPC)
-                {
-                    STARTCOROUTINEPC = false;
-                    Debug.Log("Iniciar Coroutine desde PC");
-                    CoroutineStart();
-                    soundManager.SelectClip(3, 1f);
-                }
+                STARTCOROUTINEPC = false;
+                Debug.Log("Iniciar Coroutine desde PC");
+                CoroutineStart();
+                soundManager.SelectClip(3, 1f);
             }
         }
 #endif

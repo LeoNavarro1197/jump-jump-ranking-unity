@@ -13825,6 +13825,8 @@ MonoBehaviour:
   rightArrow: {fileID: 2113941291}
   marcoButtonLeft: {fileID: 2124748817}
   marcoButtonRight: {fileID: 337884725}
+  panelTutorial1: {fileID: 643822997}
+  panelTutorial2: {fileID: 653929439}
   pressContinueTxt: {fileID: 236703433}
   buttonLeftTxt: {fileID: 228890821}
   buttonRightTxt: {fileID: 1575856957}
